@@ -64,12 +64,23 @@ li{
     text-decoration: underline;
 }
 
-
-
-
-
-
-
+/*peliculas*/
+.peliculas{
+    background-color: salmon;
+}
+.titulos{
+    color: gold;
+    text-decoration: royalblue underline;
+    
+}
+.ordenpeliculas{
+    border: solid 5px black;
+    padding: 8px;
+    background-color: wheat;
+}
+.listapeliculas{
+    width: 100%;
+}
 
 .footer{
     display: flex;
@@ -96,6 +107,11 @@ li{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .peliculas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 
 }
 
@@ -111,6 +127,10 @@ li{
         margin: 10px auto;
     }
     .opcionesgenero{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .peliculas{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
