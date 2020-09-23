@@ -10,5 +10,18 @@
     .nuestras-peliculas{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    } 
-}
+        background-color: rgb(14, 37, 56);
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .cartelera-titulo{
+        background-color: rgb(14, 37, 56);
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 300%;
+    }
+    .subtitulo{
+    background-color: rgb(14, 37, 56);
+    color: rgb(255, 255, 255);
+    font-size: 200%;
+    }
