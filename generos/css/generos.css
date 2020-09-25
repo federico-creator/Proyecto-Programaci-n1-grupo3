@@ -3,9 +3,13 @@
     box-sizing: border-box;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif; 
+    margin: 0px;
 }
 li{
     list-style-type: none;
+}
+.main{
+    background-color: navy;
 }
 
 /*HEADER*/
@@ -47,11 +51,13 @@ li{
 /*intro*/
 .intro {
     background-color: beige;
+    margin: 10px;
 }
 
 /*generos*/
 .generos{
     background-color: powderblue;
+    margin: 10px;
 }
 
 .opcionesgenero li a{
@@ -100,6 +106,9 @@ li{
 .nuestras{
     padding: 23px;
 }
+.portada{
+    display: none;
+}
 
 @media(min-width: 768px){
     .abajo{
@@ -141,5 +150,8 @@ li{
     .peliculasyseries{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .portada{
+        display: block;
     }
 }
