@@ -16,17 +16,21 @@ main{
 /*HEADER*/
 
 .header{
-    background-color: black;
+    background-color: #A0A0A0;
     width: 100%;
 }
 .arriba{
     display: flex;
     justify-content: space-between;
-    border-bottom-color: white ;
+    border-bottom-color: #B1832C ;
     border-bottom-style: solid; 
+    border-bottom-width: 5px;
 }
 .abajo{
     text-align: center;
+}
+.logo{
+    width: 50%;
 }
 .opciones{
     display: grid;
@@ -145,12 +149,6 @@ main{
     .opcionesgenero{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    .header{
-        height: 100px;
-    }
-    .arriba{
-        height: 50px;
     }
     .generos ul li:hover > ul{
         display: block;
