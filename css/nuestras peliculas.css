@@ -5,6 +5,44 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/*header*/
+.header{
+    background-color: black;
+    width: 100%;
+}
+.arriba{
+    display: flex;
+    justify-content: space-between;
+    border-bottom-color: white ;
+    border-bottom-style: solid; 
+}
+.abajo{
+    text-align: center;
+}
+.opciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
+}
+
+.opciones li a{
+    color: white;
+    text-decoration: none;
+}
+.opciones li a:hover{
+    text-decoration: underline;
+}
+
+
+.search a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+
 /*desktop*/
 @media (min-width: 1024px){
     .nuestras-peliculas{

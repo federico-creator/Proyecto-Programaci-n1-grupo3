@@ -2,11 +2,16 @@
 *{ 
     box-sizing: border-box;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px; 
 }
 li{
     list-style-type: none;
 }
+main{
+    background-color: slategrey;
+}
+
 
 /*HEADER*/
 
@@ -21,17 +26,17 @@ li{
     border-bottom-style: solid; 
 }
 .abajo{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    text-align: center;
 }
 .opciones{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
 }
 
 .opciones li a{
     color: white;
     text-decoration: none;
-    padding: 50px;
 }
 .opciones li a:hover{
     text-decoration: underline;
@@ -42,28 +47,61 @@ li{
     color: white;
     text-decoration: none;
     padding: 10px;
+    font-size: 1.5rem;
 }
 
 /*intro*/
 .intro {
     background-color: beige;
+    margin: 10px;
 }
 
 /*generos*/
 .generos{
     background-color: powderblue;
+    margin: 10px;
+    text-align: center;
 }
 
 .opcionesgenero li a{
     color: rebeccapurple;
     text-decoration: none;
-    padding: 50px;
     font-size: 2rem;
 }
 .opcionesgenero li a:hover{
     text-decoration: underline;
 }
-
+    /*dropdown*/
+.dropdown1{
+    display: none;
+    background: burlywood;
+    text-align: center;
+    color: rgb(65, 37, 2);
+    position: absolute;
+    width: 20%;
+    left: 7%;
+    border: brown solid 5px;
+}
+.dropdown2{
+    display: none;
+    background: burlywood;
+    text-align: center;
+    color: rgb(65, 37, 2);
+    position: absolute;
+    width: 20%;
+    left: 40.5%;
+    border: brown solid 5px;
+}
+.dropdown3{
+    display: none;
+    background: burlywood;
+    text-align: center;
+    color: rgb(65, 37, 2);
+    position: absolute;
+    width: 20%;
+    left: 72.5%;
+    border: brown solid 5px;
+}
 
 
 
@@ -75,18 +113,14 @@ li{
     display: flex;
     color: white;
     background-color: black;
-
     height: 70  px;
+    justify-content: space-between;
 }
 .nuestras{
     padding: 23px;
 }
 
 @media(min-width: 768px){
-    .abajo{
-        display: flex;
-        justify-content: space-between;
-    }
     .opciones{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -95,105 +129,30 @@ li{
     .opcionesgenero{
         display: grid;
         grid-template-columns: 1fr 1fr;
+
     }
 
 }
 
 @media (min-width: 1020px){
     
-    .abajo{
-        display: flex;
-        justify-content: space-between;
-    }
     .opciones{
         display: flex;
         justify-content: space-between;
         margin: 10px auto;
+        width: 100%;
     }
     .opcionesgenero{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer{
-    display: flex;
-    color: white;
-    background-color: rgb(14, 37, 56);
-
-    height: 70  px;
-}
-.nuestras{
-    padding: 23px;
+    .header{
+        height: 100px;
+    }
+    .arriba{
+        height: 50px;
+    }
+    .generos ul li:hover > ul{
+        display: block;
+    }
 }
