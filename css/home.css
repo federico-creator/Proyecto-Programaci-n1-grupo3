@@ -76,8 +76,7 @@ img,video{
 .footer{
     display: flex;
     color: white;
-    background-color: rgb(14, 37, 56);
-    height: 70px;
+    background-color: black;
     justify-content: space-between;
 }
 .nuestras{
@@ -128,5 +127,6 @@ img,video{
         height: 600px;
         justify-content: center;
     }
-
+.series{
+    text-align: center;
 }
