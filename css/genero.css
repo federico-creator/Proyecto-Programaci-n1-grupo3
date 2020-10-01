@@ -9,7 +9,7 @@ li{
     list-style-type: none;
 }
 main{
-    background-color: slategrey;
+    background-color: #B1832C;
 }
 
 
@@ -75,7 +75,7 @@ main{
 .opcionesgenero li a:hover{
     text-decoration: underline;
 }
-    /*dropdown*/
+/*dropdown*/
 .dropdown1{
     display: none;
     background: burlywood;
@@ -107,7 +107,10 @@ main{
     border: brown solid 5px;
 }
 
-
+.espacio{
+    background-color: #4F3B14;
+    height: 200px;
+}
 
 
 
@@ -117,7 +120,7 @@ main{
     display: flex;
     color: white;
     background-color: black;
-    height: 70px;
+    height: 70  px;
     justify-content: space-between;
 }
 .nuestras{
@@ -133,7 +136,10 @@ main{
     .opcionesgenero{
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+    }
+    .espacio{
+        background-color: #4F3B14;
+        height: 350px;
     }
 
 }
@@ -152,5 +158,9 @@ main{
     }
     .generos ul li:hover > ul{
         display: block;
+    }
+    .espacio{
+        background-color: #4F3B14;
+        height: 630px;
     }
 }
