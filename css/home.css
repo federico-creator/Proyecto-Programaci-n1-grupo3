@@ -104,6 +104,15 @@ img,video{
     width: 100%;
     height: 300px;
 }
+.actores{
+    border: solid 5px black;
+    padding: 8px;
+    background-color:goldenrod;
+}
+.imgactores{
+    width: 100%;
+    height: 300px;
+}
 .links{
     text-align: center;
     text-decoration: none;
@@ -177,5 +186,14 @@ img,video{
     .peliculasyseries{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .footer{
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+    }
+    .tapar{
+        height: 60px;
     }
 }
