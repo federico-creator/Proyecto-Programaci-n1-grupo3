@@ -99,6 +99,9 @@ li{
 .imgpeliculas:hover{
     opacity: 0.5;
 }
+.imgserie:hover{
+    opacity: 0.5;
+}
 .links{
     text-align: center;
     font-size: 2rem;
@@ -163,5 +166,14 @@ li{
     }
     .portada{
         display: block;
+    }
+    .footer{
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+    }
+    .tapar{
+        height: 60px;
     }
 }
