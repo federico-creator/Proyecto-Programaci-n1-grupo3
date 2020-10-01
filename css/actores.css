@@ -1,0 +1,97 @@
+/*cosas generales*/
+*{ 
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0px;
+}
+main{
+    background-color:#B1832C ;
+}
+li{
+    list-style-type: none;
+}
+img,video{
+    width: 100%;
+}
+
+/*HEADER*/
+
+.header{
+    background-color: #A0A0A0;
+    width: 100%;
+}
+.arriba{
+    display: flex;
+    justify-content: space-between;
+    border-bottom-color: #B1832C ;
+    border-bottom-style: solid; 
+    border-bottom-width: 5px;
+}
+.abajo{
+    text-align: center;
+}
+.logo{
+    width: 50%;
+}
+.opciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
+}
+
+.opciones li a{
+    color: white;
+    text-decoration: none;
+}
+.opciones li a:hover{
+    text-decoration: underline;
+}
+
+
+.search a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.footer{
+    display: flex;
+    color: white;
+    background-color: black;
+    justify-content: space-between;
+}
+.nuestras{
+    padding: 23px;
+}
+
+/*Aquí iran los media queries*/
+
+@media(min-width: 768px){
+    .abajo{
+        display: flex;
+        justify-content: space-between;
+    }
+    .opciones{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 1020px){
+    
+    .opciones{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px auto;
+        width: 100%;
+    }
+    .fondo{
+        background-image: url(../img/fondodescktop.jpg) ;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 600px;
+    }
+}
