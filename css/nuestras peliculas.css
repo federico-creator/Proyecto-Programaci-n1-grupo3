@@ -42,6 +42,13 @@
     font-size: 1.5rem;
 }
 
+.footer{
+    display: flex;
+    color: white;
+    background-color: black;
+    justify-content: space-between;
+}
+
 
 /*desktop*/
 @media (min-width: 1024px){
