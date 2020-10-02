@@ -11,7 +11,7 @@ main{
 li{
     list-style-type: none;
 }
-img,video{
+img{
     width: 100%;
 }
 

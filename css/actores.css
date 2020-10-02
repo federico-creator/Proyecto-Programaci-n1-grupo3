@@ -47,8 +47,6 @@ img,video{
 .opciones li a:hover{
     text-decoration: underline;
 }
-
-
 .search a{
     color: white;
     text-decoration: none;
@@ -56,6 +54,7 @@ img,video{
     font-size: 1.5rem;
 }
 
+/*footer*/
 .footer{
     display: flex;
     color: white;
