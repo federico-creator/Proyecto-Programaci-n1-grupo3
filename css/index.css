@@ -78,7 +78,11 @@ img{
     color: rgb(0, 0, 0);
     text-decoration: #A0A0A0 underline;
 }
-.peliculasyseries{
+.peliculas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.series{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -90,6 +94,7 @@ img{
     border: solid 5px black;
     padding: 8px;
     background-color:goldenrod;
+    height: 350px;
 }
 .imgpeliculas{
     width: 100%;
@@ -98,16 +103,22 @@ img{
 .serie{
     border: solid 5px black;
     padding: 8px;
-    background-color: goldenrod;
+    background-color:goldenrod;
+    height: 350px;
 }
 .imgserie{
     width: 100%;
     height: 300px;
 }
 .actores{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.actor{
     border: solid 5px black;
     padding: 8px;
     background-color:goldenrod;
+    height: 350px;
 }
 .imgactores{
     width: 100%;
@@ -154,9 +165,26 @@ img{
         background-image: url(../img/fondo\ tablet.jpg);
         height: 300px;
     }
-    .peliculasyseries{
+    .peliculas{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .pelicula{
+        height: 420px;
+    }
+    .series{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .serie{
+        height: 420px;
+    }
+    .actores{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .actor{
+        height: 420px;
     }
 }
 
@@ -180,12 +208,29 @@ img{
         height: 600px;
         justify-content: center;
     }
-    .series{
+    .serie{
         text-align: center;
     }
-    .peliculasyseries{
+    .peliculas{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .pelicula{
+        height: 320px;
+    }
+    .series{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .serie{
+        height: 320px;
+    }
+    .actores{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .actor{
+        height: 320px;
     }
     .footer{
         bottom: 0;
@@ -196,4 +241,5 @@ img{
     .tapar{
         height: 60px;
     }
+
 }
