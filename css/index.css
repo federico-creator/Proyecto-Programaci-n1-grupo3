@@ -14,6 +14,12 @@ li{
 img{
     width: 100%;
 }
+img:hover{
+    transform:scale(0.97);
+    -ms-transform:scale(0.97);
+    border-radius: 10px;
+    border: solid ghostwhite;
+}
 
 /*HEADER*/
 
@@ -78,14 +84,6 @@ img{
     color: rgb(0, 0, 0);
     text-decoration: #A0A0A0 underline;
 }
-.peliculas{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.series{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 .titulos{
     color: rgb(0, 0, 0);
     text-decoration: #A0A0A0 underline;
@@ -94,11 +92,6 @@ img{
     border: solid 5px black;
     padding: 8px;
     background-color:goldenrod;
-    height: 350px;
-}
-.imgpeliculas{
-    width: 100%;
-    height: 300px;
 }
 .serie{
     border: solid 5px black;
@@ -110,28 +103,9 @@ img{
     width: 100%;
     height: 300px;
 }
-.actores{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.actor{
-    border: solid 5px black;
-    padding: 8px;
-    background-color:goldenrod;
-    height: 350px;
-}
-.imgactores{
-    width: 100%;
-    height: 300px;
-}
-.links{
-    text-align: center;
-    text-decoration: none;
-    color: white;
-}
-.links:hover{
-    text-decoration: underline black;
-}
+
+
+
 /*footer*/
 .footer{
     display: flex;
@@ -168,9 +142,6 @@ img{
     .peliculas{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    .pelicula{
-        height: 420px;
     }
     .series{
         display: grid;
@@ -214,9 +185,6 @@ img{
     .peliculas{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    .pelicula{
-        height: 320px;
     }
     .series{
         display: grid;
