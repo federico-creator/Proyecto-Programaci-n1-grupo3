@@ -22,7 +22,7 @@ window.addEventListener("load",function(){
         var gnre = datos.genres
         var generos = "";
         for (var i = 0; i < gnre.length; i++) {
-            generos += `<a href="generos.html?id=${datos.genres[i].id}">${datos.genres[i].name} </a> `
+            generos += `<a href="xgeneropelicula.html?id=${datos.genres[i].id}">${datos.genres[i].name} </a> `
         }
         
         info.innerHTML += `<h3 ><strong>Géneros: </strong> ${generos} </h3>`

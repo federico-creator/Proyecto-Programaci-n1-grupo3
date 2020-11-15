@@ -53,14 +53,8 @@ main{
     padding: 10px;
     font-size: 1.5rem;
 }
-/*generos */
-  
-.hover:hover {
-    transform:scale(0.97);
-    -ms-transform:scale(0.97);
-    border-radius: 10px;
-    border: solid ghostwhite;
-  }
+
+
 /*footer*/
 .footer{
     display: flex;
