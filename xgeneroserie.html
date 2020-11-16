@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/uikit-rtl.css">
     <link rel="stylesheet" href="css/uikit.css">
     <!-- JAVA -->
-    <script src="js/xgeneroserie.js"></script>
+    <script src="js/xgeneropelicula.js"></script>
     <script src="js/uikit.js"></script>
     <script src="js/uikit-icons.js"></script>
     <script src="js/uikit.min.js"></script>
@@ -51,83 +51,11 @@
             </nav>
                 
         </header>
-        <h2 class="titulos" >Géneros</h2>
-        <div class="container">
+        <h2 id="titulo"> </h2>
+        <div class="serires">
+      
+        </div>
 
-            <div uk-slider="autoplay: true autoplay-interval:1000 pause-on-hover: true">
-      
-              <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-      
-                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                  <li><a  href="xgenero.html?id=10759&name=Action%20&%20Adventure"><img src="Posters/action.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=80&name=Crime"><img src="Posters/crime.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=18&name=Drama"><img src="Posters/drama.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=10768&name=War%20&%20Politics"><img src="Posters/war.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=16&name=Animation"><img src="Posters/animation.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=35&name=Comedy"><img src="Posters/comedy.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=10765&name=Sci-Fi%20&%20Fantasy"><img src="Posters/sci-fi.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=99&name=Documentary"><img src="Posters/documentary.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=10751&name=Family"><img src="Posters/family2.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=10767&name=Reality"><img src="Posters/reality.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=10762&name=Kids"><img src="Posters/kids.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=9648&name=Mystery"><img src="Posters/mistery.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=37&name=Western"><img src="Posters/western.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=10763&name=News"><img src="Posters/news.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=10766&name=Soap"><img src="Posters/soap.jpg" alt=""></a></li>
-                  <li><a  href="xgenero.html?id=10767&name=Talk"><img src="Posters/talk.jpg" alt=""></a></li>
-                </ul>
-      
-                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-      
-              </div>
-      
-              <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-      
-            </div>
-
-        <!--<nav class="generos">
-            <ul class="opcionesgenero">
-                <li>
-                    <a href="generos/accion.html" title="Haz Click para ver la lista"> Acción</a>
-                    <ul class="dropdown1">
-                        <li> ¿Quíen no disfruta de una buena película o serie con protagonistas invencibles? ¿Quíen no quiere ver balaceras y explosiones a cal y canto sin que a nadie parezca preocuparle? Si eres parte de los que disfrutan de una buena trama llena de acción, no puedes perderte nuestras recomendaciones de Películas y Series de acción que te facinaran </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="generos/terror.html" title="Haz Click para ver la lista">Terror</a>
-                    <ul class="dropdown2">
-                        <li> El susurro que acabas de escuchar, ¿fue real o solo tu imaginación víctima del terror de este genero? Si tu hobby se basa pricipalmente en ver series y películas que no te dejen dormir por las noches, no te juzgamos. Disfruta de nuestra sección de Películas y Series de terror para ver solo una noche de tormenta, y que disfrutes.  </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="generos/suspenso.html" title="Haz Click para ver la lista">Suspenso </a>
-                    <ul class="dropdown3">
-                        <li> ¿Quíen no disfruta de una buena película o serie que te deja más dudas que respuestas cuando termina? Películas y Series de Misterios, detectives, asesinatos, donde uno termina tratando de descubrir el giro final antes que el protagonista. Ideales para ver con amigos y familia, Aquí esta nuestra lista de series y películas de suspenso </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="generos/comedias.html" title="Haz Click para ver la lista">Comedias</a>
-                    <ul class="dropdown1">
-                        <li> Si los disparos y explosiones exageradas no son lo tuyo, el terror te asusta, el romance te aburre y con el suspenso la pasas fatal, ¿Qué tal un género que los conbine todos, pero con una base cómica o paródica? Aquí esta nuestra sección de comedias recomendadas para ver junto a toda la familia, y disfrutar lo bueno de la vida </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="generos/Romance.html" title="Haz Click para ver la lista">Romance</a>
-                    <ul class="dropdown2">
-                        <li> Muy similar al genero acción, pero sin las balaceras. Películas con relaciones imposibles, parejas hermosas, situaciones paradisíacas, con toques de drama que arruinan la perfección y nos hacen decir, Así es la vida. A continuación estan las series y películas de romance para los que quieran derramar unas buenas lágrimas </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="generos/clasicas.html" title="Haz Click para ver la lista"> Clásicas</a>
-                    <ul class="dropdown3">
-                        <li> ¿Ese actor quíen es? En mi época los actores actuaban de verdad, no como ahora, que es puro efecto especial. Si las corrientes del cine actual no son lo tuyo, te invitamos a ver nuestra lista de películas y series clásicas, que nos dieron un susto, sorpresa, risa o simplemente nos entretuvieron, pero que se ganaron un lugar en nuestro corazón</li>
-                    </ul>
-                </li>
-
-            </ul>
-        </nav>-->
-        <section class="espacio"></section>
         <section class="tapar"></section>
         <section class="footer">
             <article class="nuestras">

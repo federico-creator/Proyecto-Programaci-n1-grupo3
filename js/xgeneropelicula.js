@@ -7,10 +7,19 @@ window.addEventListener("load",function(){
       return respuesta.json();
     })
     .then(function(datos) {
-        let slider = document.getElementById("gen")
-        console.log(datos);
+        var titulo = document.getElementById("titulo")
+        var name = query2.get("name")
+        if(name == null){
+            var name = query2.get("id_name")
+            titulo.innerHTML = `Usted esta viendo peliculas del genero ${name}`
+        }
+        else{
+            titulo.innerHTML = `Usted esta viendo peliculas del genero ${name}`
+        }
+
+        let peliculas = document.querySelector(".peliculas")
         datos.results.forEach(d => {
-            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img class= "imgrecomendadas"src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
+            peliculas.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img class= "imgrecomendadas"src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
         });
     })
 })
