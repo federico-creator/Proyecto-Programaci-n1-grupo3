@@ -62,11 +62,28 @@ main{
 .peliculas li{
     margin: 2%;
 }
+.series{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+.series li{
+    margin: 2%;
+}
 .imgrecomendadas:hover{
     transform:scale(0.97);
     -ms-transform:scale(0.97);
     border-radius: 10px;
     border: solid ghostwhite;
+}
+.pelicula{
+    border: solid 5px black;
+    padding: 8px;
+    background-color:goldenrod;
+}
+.serie{
+    border: solid 5px black;
+    padding: 8px;
+    background-color:goldenrod;
 }
 
 
@@ -88,9 +105,8 @@ main{
         grid-template-columns: 1fr 1fr 1fr;
         margin: 10px auto;
     }
-    .opcionesgenero{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .series{
+        grid-template-columns: 1fr 1fr 1fr;    
     }
     .peliculas{
         grid-template-columns: 1fr 1fr 1fr;    
@@ -106,10 +122,6 @@ main{
         margin: 10px auto;
         width: 100%;
     }
-    .opcionesgenero{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
     .generos ul li:hover > ul{
         display: block;
     }
@@ -120,6 +132,9 @@ main{
         height: 60px;
     }
     .peliculas{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+    }
+    .series{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
     }
     .tapar{

@@ -54,7 +54,7 @@ main{
     font-size: 1.5rem;
 }
 /*generos */
-  
+
 .hover:hover {
     transform:scale(0.97);
     -ms-transform:scale(0.97);
@@ -88,14 +88,6 @@ main{
         grid-template-columns: 1fr 1fr 1fr;
         margin: 10px auto;
     }
-    .opcionesgenero{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .espacio{
-        background-color: #4F3B14;
-        height: 350px;
-    }
 
 }
 
@@ -106,17 +98,6 @@ main{
         justify-content: space-between;
         margin: 10px auto;
         width: 100%;
-    }
-    .opcionesgenero{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .generos ul li:hover > ul{
-        display: block;
-    }
-    .espacio{
-        background-color: #4F3B14;
-        height: 630px;
     }
     .footer{
         bottom: 0;

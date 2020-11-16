@@ -97,7 +97,6 @@ img:hover{
     border: solid 5px black;
     padding: 8px;
     background-color:goldenrod;
-    height: 350px;
 }
 .imgserie{
     width: 100%;
@@ -139,24 +138,6 @@ img:hover{
         background-image: url(../img/fondo\ tablet.jpg);
         height: 300px;
     }
-    .peliculas{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .series{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .serie{
-        height: 420px;
-    }
-    .actores{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .actor{
-        height: 420px;
-    }
 }
 
 @media (min-width: 1020px){
@@ -178,27 +159,6 @@ img:hover{
         font-size: 22px;
         height: 600px;
         justify-content: center;
-    }
-    .serie{
-        text-align: center;
-    }
-    .peliculas{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    .series{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    .serie{
-        height: 320px;
-    }
-    .actores{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    .actor{
-        height: 320px;
     }
     .footer{
         bottom: 0;
