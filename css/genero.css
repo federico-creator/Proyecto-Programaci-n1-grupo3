@@ -60,7 +60,16 @@ main{
     -ms-transform:scale(0.97);
     border-radius: 10px;
     border: solid ghostwhite;
-  }
+}
+.terror{
+    height: 606px;
+}
+.terror:hover{
+    transform:scale(0.97);
+    -ms-transform:scale(0.97);
+    border-radius: 10px;
+    border: solid ghostwhite;
+}
 /*footer*/
 .footer{
     display: flex;

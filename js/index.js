@@ -39,7 +39,7 @@ window.addEventListener("load",function(){
     .then(function(datos){
         let slider = document.getElementById("seriesPopulares")
         datos.results.forEach(d => {
-            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
+            slider.innerHTML += `<li class="serie"><a href="serieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
         });
         
     })
@@ -54,7 +54,7 @@ window.addEventListener("load",function(){
     .then(function(datos){
         let slider = document.getElementById("seriesEmision")
         datos.results.forEach(d => {
-            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
+            slider.innerHTML += `<li class="series"><a href="serieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
         });
         
     })

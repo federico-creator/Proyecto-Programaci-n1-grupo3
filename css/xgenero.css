@@ -54,6 +54,21 @@ main{
     font-size: 1.5rem;
 }
 
+/*main*/
+.peliculas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+.peliculas li{
+    margin: 2%;
+}
+.imgrecomendadas:hover{
+    transform:scale(0.97);
+    -ms-transform:scale(0.97);
+    border-radius: 10px;
+    border: solid ghostwhite;
+}
+
 
 /*footer*/
 .footer{
@@ -77,9 +92,8 @@ main{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .espacio{
-        background-color: #4F3B14;
-        height: 350px;
+    .peliculas{
+        grid-template-columns: 1fr 1fr 1fr;    
     }
 
 }
@@ -99,15 +113,14 @@ main{
     .generos ul li:hover > ul{
         display: block;
     }
-    .espacio{
-        background-color: #4F3B14;
-        height: 630px;
-    }
     .footer{
         bottom: 0;
         position: fixed;
         width: 100%;
         height: 60px;
+    }
+    .peliculas{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
     }
     .tapar{
         height: 60px;
