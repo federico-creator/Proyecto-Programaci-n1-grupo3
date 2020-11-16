@@ -7,6 +7,7 @@ window.addEventListener("load",function(){
       return respuesta.json();
     })
     .then(function(datos) {
+        console.log(datos);
         var titulo = document.getElementById("titulo")
         var name = query2.get("name")
         if(name == null){
@@ -17,9 +18,9 @@ window.addEventListener("load",function(){
             titulo.innerHTML = `Usted esta viendo series del genero ${name}`
         }
 
-        let peliculas = document.querySelector(".series")
+        let series = document.querySelector(".series")
         datos.results.forEach(d => {
-            peliculas.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img class= "imgrecomendadas"src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
+            series.innerHTML += `<li class="serie"><a href="movieDetail.html?id=${d.id}"> <img class= "imgrecomendadas"src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
         });
     })
 })
