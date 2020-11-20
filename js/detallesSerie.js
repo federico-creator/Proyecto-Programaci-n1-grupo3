@@ -16,9 +16,7 @@ window.addEventListener("load",function(){
             foto.innerHTML = '<img src="img/notfound.jpg">'
         }
 
-        info.innerHTML += `<h2><strong> ${datos.title}</strong></h2>`
-        
-
+        info.innerHTML += `<h2><strong> ${datos.name}</strong></h2>`
         var gnre = datos.genres
         var generos = "";
         for (var i = 0; i < gnre.length; i++) {
