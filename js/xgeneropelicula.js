@@ -2,7 +2,10 @@ window.addEventListener("load",function(){
     var querystring = location.search;
     var query2 = new URLSearchParams(querystring)
     var id = query2.get("id")
-    fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=0d278db4bda20f994d6bf90837dc480e&language=en-US&page=1`)
+    page = 1
+    vermas(page)
+    function vermas(page){
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=0d278db4bda20f994d6bf90837dc480e&language=en-US&sort_by=popularity.desc&page=${page}&with_genres=${id}`)
     .then(function(respuesta) {
       return respuesta.json();
     })
@@ -21,5 +24,14 @@ window.addEventListener("load",function(){
         datos.results.forEach(d => {
             peliculas.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img class= "imgrecomendadas"src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
         });
+    })
+    }
+    window.addEventListener('scroll', function (){
+        var body = document.querySelector('body')
+        var limite = body.scrollHeight
+        if (body.offsetHeight + body.scrollTop >= limite) {
+            page++
+            vermas(page)
+        }
     })
 })
