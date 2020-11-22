@@ -26,13 +26,13 @@ window.addEventListener("load",function(){
                 series.innerHTML += `<li class="serie"><a href="seriedetail.html?id=${d.id}"> <img class= "imgrecomendadas"src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
             });
         })
-        .catch(function(error){
-            console.log(error);
-        })
-        var btn = document.querySelector("#mas");
-        btn.onclick = function() {
+    }
+    window.addEventListener('scroll', function (){
+        var body = document.querySelector('body')
+        var limite = body.scrollHeight
+        if (body.offsetHeight + body.scrollTop >= limite) {
             page++
             vermas(page)
         }
-    }
+    })
 })
