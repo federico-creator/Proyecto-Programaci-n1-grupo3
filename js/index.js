@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-    alert ("bienvenidos al Tops, somos el uno, somos el Tops")
+    //alert ("bienvenidos al Tops, somos el uno, somos el Tops")
     //fetch de peliculas populares
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=0d278db4bda20f994d6bf90837dc480e&language=en-US&page=1")
     .then(function(respuesta){
