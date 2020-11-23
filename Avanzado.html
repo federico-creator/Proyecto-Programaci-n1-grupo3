@@ -1,0 +1,128 @@
+<!---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>avanzado</title>
+    <link rel="stylesheet" href="css/avanzado.css">
+    <script src="js/avanzado.js"></script>
+</head>
+
+<body>
+    <div class="wrapper1">
+        <div class="title">
+            Genero que desa incluir
+        </div>
+        <div class="select_wrap">
+            <ul class="default_option">
+                <li>
+                    <div class="option pizza">
+                        <div class="icon"></div> 
+                        <p>Acción</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="select_ul">
+                <li>
+                    <div class="option pizza">
+                        <div class="icon"></div>
+                        <p>Crimen</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="option burger">
+                        <div class="icon"></div>
+                        <p>Drama</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="option ice">
+                        <div class="icon"></div>
+                        <p>Guerra y política</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="wrapper2">
+        <div class="title">
+            Genero que desa excluir
+            
+        </div>
+        <div class="select_wrap">
+            <ul class="default_option">
+                <li>
+                    <div class="option pizza">
+                        <div class="icon"></div> 
+                        <p>Acción</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="select_ul">
+                <li>
+                    <div class="option pizza">
+                        <div class="icon"></div>
+                        <p>Crimen</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="option burger">
+                        <div class="icon"></div>
+                        <p>Drama</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="option ice">
+                        <div class="icon"></div>
+                        <p>Guerra y política</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>--->
+
+<!-- MODAL Avanzada-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="avanzado.css">
+    <script src="js/avanzado.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <a id="avanzada" href="#modal-avan" uk-toggle>Busqueda Avanzada</a>
+    <div id="modal-avan" uk-modal>
+        <div id="modal_avanzada" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title">Ingrese su búsqueda</h2>
+            <form class="avana" action="avanzado.html" method="get">
+                <label for="generos">Buscar:</label>
+                <select class="incluir" name="incluir">
+                    <option value="">Ninguno</option>
+                </select>
+
+                <label for="">Excluir</label>
+                <select class="excluir" name="excluir">
+                    <option value="">Ninguno</option>
+                    <!-- api generos -->
+                </select>
+        </div>
+    </div>
+</body>
+
+</html>
