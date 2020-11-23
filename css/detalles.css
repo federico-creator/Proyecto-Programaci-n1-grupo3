@@ -97,16 +97,6 @@ body{
   
 
 
-/*footer*/
-.footer{
-    display: flex;
-    color: white;
-    background-color: black;
-    justify-content: space-between;
-}
-.nuestras{
-    padding: 23px;
-}
 
 /*Aquí iran los media queries*/
 
@@ -147,12 +137,7 @@ body{
         height: 600px;
         justify-content: center;
     }
-    .footer{
-        bottom: 0;
-        position: fixed;
-        width: 100%;
-        height: 60px;
-    }
+
     .tapar{
         height: 60px;
     }
@@ -166,3 +151,53 @@ body{
     }
 
 }
+footer {
+    width: 100%;
+    background: gray;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  footer .TOPS {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 0.8rem;
+    margin: 2%;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  footer #logo {
+    width: 50%;
+    margin-top: 5%;
+  }
+  
+  footer .redes {
+    margin: 2%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  footer div a {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.1rem;
+  }
+  
+  footer .contacto {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 2%;
+  }
+  
+  footer .contacto p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  footer .redes h2, .contacto h2 {
+    color: rgba(255, 255, 255, 0.67)
+  }
