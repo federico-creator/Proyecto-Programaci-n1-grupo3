@@ -46,14 +46,14 @@ function validation() {
   }
 
 
-  function validate() {
+  function validation() {
   // #0 - Obtener datos del formulario
   let email = document.getDocumentById('email').value;
   let nombre = document.getDocumentById('nombre').value;
   
   // #1 - Validar que el form este lleno
   if (email == "" || nombre == "") {
-    // <p id="loginError" style="display:none">Clave o nombre esta vacio.</p>
+   // <p id="loginError" style="display:none">Clave o nombre esta vacio.</p>
     let loginErrorText = document.getDocumentById('loginError');
     loginErrorText.style.display = "block";
     return;
