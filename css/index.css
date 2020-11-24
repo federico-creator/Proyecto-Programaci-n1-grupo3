@@ -84,10 +84,6 @@ img:hover{
     color: rgb(0, 0, 0);
     text-decoration: #A0A0A0 underline;
 }
-.titulos{
-    color: rgb(0, 0, 0);
-    text-decoration: #A0A0A0 underline;
-}
 .pelicula{
     border: solid 5px black;
     padding: 8px;
@@ -102,7 +98,9 @@ img:hover{
     width: 100%;
     height: 300px;
 }
-
+/*.favoritos{
+    display: none;
+}*/
 
 /*Aquí iran los media queries*/
 
