@@ -31,22 +31,9 @@ function closeLoginForm() {
     popup.style.display = 'none';
 }
 
-function validation() {
-    // #0 - Obtener datos del formulario
-    let nombre = document.getElementById('nombre').value
-    let email = document.getElementById('email').value
-    
-    // #1 - Validar que el form este lleno 
-    if ('email')  
-    
-    // #2 - Guardar datos del usuario en el storage
-    
-    // #3 - Cierrra el popup
-      closeLoginForm();
-  }
 
 
-  function validation() {
+/*function validation() {
   // #0 - Obtener datos del formulario
   let email = document.getDocumentById('email').value;
   let nombre = document.getDocumentById('nombre').value;
@@ -74,7 +61,7 @@ function validation() {
   
   // #4 - Actualizar header
   showUserInfo();
-}
+}*/
 
  function showUserInfo(){
   // #0 - Obtener datos del usuario
