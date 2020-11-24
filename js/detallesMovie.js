@@ -1,4 +1,13 @@
 window.addEventListener("load",function(){
+    var recuperoStorage = localStorage.getItem("seriesFavoritos");
+    if (recuperoStorage == null) {
+        // Creo una lista vacia
+        seriesFavoritos = [];
+    } else {
+        // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
+        seriesFavoritos = JSON.parse(recuperoStorage);
+    }
+
     let detallepelicula = location.search
     let detallePeliculaObjeto = new URLSearchParams(detallepelicula)
     let id = detallePeliculaObjeto.get("id")
@@ -52,5 +61,31 @@ window.addEventListener("load",function(){
             slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img class= "imgrecomendadas"src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
         });
     })
+  if (seriesFavoritos.includes(id)) {
+    document.querySelector(".botonFavorito").innerHTML = "Quitar de Favoritos";
+  }
+  fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(id) {})
+  document.querySelector(".botonFavorito").onclick = function() {
+    //Paso 2: Modificar la informacion
+    // Si la serie ya era favorito
+    if (seriesFavoritos.includes(id)) {
+      // Lo quito
+      var index = seriesFavoritos.indexOf(id);
+      seriesFavoritos.splice(index, 1);
+      document.querySelector(".botonFavorito").innerHTML = "Agregar a favoritos";
+    } else {
+      //Lo agrego
+      seriesFavoritos.push(id);
+      document.querySelector(".botonFavorito").innerHTML = "Quitar de favoritos";
+    }
+    //Paso 3: Escribir en storage
+    var infoParaStorage = JSON.stringify(seriesFavoritos);
+    localStorage.setItem("seriesFavoritos", infoParaStorage);
+    console.log(localStorage);
+  }
 
 })
