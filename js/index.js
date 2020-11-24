@@ -10,26 +10,30 @@ window.addEventListener("load",function(){
         datos.results.forEach(d => {
             slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
             <div> 
-            <button id="${JSON.stringify(d)}" type="send" name="favoritos" class="btn btn-success btn-block favoritos"><strong>agregar a favoritos</strong></button>
+            <button id="${JSON.stringify(d.id)}" type="send" name="favoritos" class="btn btn-success btn-block favoritos"><strong>agregar a favoritos</strong></button>
             </div>
             </li>`
-            let respuesta = d
-            let favoritos = document.querySelectorAll(".favoritos")
-            let favo = []
-            favoritos.forEach(pelicula => {
-            pelicula.addEventListener('click', function(){
-                console.log(`se hizo click`);
-                if(window.localStorage.getItem("favo") == null){
-                    window.localStorage.setItem("favo", JSON.stringify(favo))
-                }
-                else{
-                    let objetoañadido = JSON.parse(window.localStorage.getItem("favo"))
-                    objetoañadido.push(respuesta)
-                    window.localStorage.setItem("favo",JSON.stringify(objetoañadido))
-                }
-            })
+        
         })
-        });
+        let favoritos = document.querySelectorAll(".favoritos")
+        let arrayFavoritas;
+        console.log(favoritos);
+        favoritos.forEach(pelicula => {
+            pelicula.addEventListener('click', function(e){
+                console.log("se hizo click");
+                e.preventDefault()
+                let favo = localStorage.getItem('favo')
+                if( favo == null ){
+                    arrayFavoritas = []
+                } 
+                else {
+                    arrayFavoritas = JSON.parse(favo)
+                }
+                console.log(pelicula.id);
+                arrayFavoritas.push(pelicula.id)
+                localStorage.setItem('favo', JSON.stringify(arrayFavoritas))            
+            })  
+        })      
     })
     .catch(function(error){
         console.log(error);
