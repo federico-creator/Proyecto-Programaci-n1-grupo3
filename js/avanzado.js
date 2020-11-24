@@ -1,23 +1,18 @@
-window.onload = function() {
+window.addEventListener("load",function(){
+fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=9a2ac68be330a24306c03ee0dac49d3a&language=en-US')
+  .then(response => response.json())
+  .then(data => {
+    const genres = data.genres;
+    //Por cada uno de los elementos del array genres creamos una variable genres
+    let includeList = document.getElementById('includeList');
+    let excludeList= document.getElementById('excludeList');
+    for(let genre of genres){
+        let option = document.createElement('option');
+        option.text = genre.name; 
+        option.value = genre.id;
+        includeList.add(option);
+        excludeList.add(option);
+    } 
+  });
 
-
-    console.log("Hola ");
-    fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
-      .then(function(respuesta) {
-        return respuesta.json();
-      })
-      .then(function(datos) {
-        console.log(datos);
-        var buscador = document.querySelector(".avana");
-        var label1 = document.querySelector(".incluir");
-        var label2 = document.querySelector(".excluir");
-  
-        var gnre = datos.genres;
-  
-  
-        for (var i = 0; i < gnre.length; i++) {
-          label1.innerHTML += '<option value="' + datos.genres[i].id + '">' + datos.genres[i].name + '</option>'
-          label2.innerHTML += '<option value="' + datos.genres[i].id + '">' + datos.genres[i].name + '</option>'
-        }
-      })
-}
+})

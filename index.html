@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/uikit-rtl.css">
     <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/login2.css">
+    <link rel="stylesheet" href="css/login.css">
     <!-- JAVA -->
     <script src="js/index.js" defer></script>
     <script src="js/uikit.js"></script>
     <script src="js/uikit-icons.js"></script>
     <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/uikit-icons.min.js"></script>  
     <script src="js/avanzado.js"></script>
 </head>
 
 <body>
+    
     <!-- LOG IN POUPUP -->
     <div class="center" style="display: none;" id="Loginpoupup">
         <div class="popup-overlay"></div>
@@ -33,20 +33,21 @@
                 </div>
                 <div class="header">
                     Iniciar sesión
+                    
                 </div>
-                <form onsubmit="return validation()"> 
+                <div>
                     <div class="element">
                         <label for="nombre">nombre apellido</label>
-                        <input type="text" name="nombre" value="" placeholder="Nombre Apellido" id="nombre">
+                        <input type="text" name="nombre" value="" placeholder="Nombre Apellido" id="nombre" required>
                     </div>
                     <div class="element">
                         <label for="email">email</label>
-                        <input type="text" name="email" value="" placeholder="tuemail@gmail.com" id="email">
+                        <input type="email" name="email" value="" placeholder="tuemail@gmail.com" id="email" required>
                     </div>
                     <div class="element">
-                        <button id="login" type="submit" name="button">Login</button>
+                        <button id="login" type="button" name="button" onclick="showUserInfo(); closeLoginForm();">Login</button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -62,10 +63,13 @@
                         <ion-icon name="search-circle-outline"></ion-icon> Search
                     </a>
                 </section>
+                <div>
+                    <p class="Sesion" id="userBadge" style="display:none"></p>
+                </div>
                 
                 <div class="logedIn">
                     <p id="p_nombre"></p>
-                    <button class='LogOutButton' id="logOut" type="button" name="button">Log Out</button>
+                    <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log Out</button>
                     <button class='LogOutButton' id="logIn" type="button" name="button" onclick="openloginPopup()">Login</button>
                 </div>
             </nav>
@@ -196,6 +200,9 @@
         </section>
     </main>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/init.js"></script>
 </body>
+
 
 </html>
