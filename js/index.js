@@ -8,9 +8,32 @@ window.addEventListener("load",function(){
     .then(function(datos){
         let slider = document.getElementById("peliculasPopulares")
         datos.results.forEach(d => {
-            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
-        });
+            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
+            <div> 
+            <button id="${JSON.stringify(d.id)}" type="send" name="favoritos" class="btn btn-success btn-block favoritos"><strong>agregar a favoritos</strong></button>
+            </div>
+            </li>`
         
+        })
+        let favoritos = document.querySelectorAll(".favoritos")
+        let arrayFavoritas;
+        console.log(favoritos);
+        favoritos.forEach(pelicula => {
+            pelicula.addEventListener('click', function(e){
+                console.log("se hizo click");
+                e.preventDefault()
+                let favo = localStorage.getItem('favo')
+                if( favo == null ){
+                    arrayFavoritas = []
+                } 
+                else {
+                    arrayFavoritas = JSON.parse(favo)
+                }
+                console.log(pelicula.id);
+                arrayFavoritas.push(pelicula.id)
+                localStorage.setItem('favo', JSON.stringify(arrayFavoritas))            
+            })  
+        })      
     })
     .catch(function(error){
         console.log(error);
@@ -61,5 +84,7 @@ window.addEventListener("load",function(){
     .catch(function(error){
         console.log(error);
     })
+
+    
 
 })

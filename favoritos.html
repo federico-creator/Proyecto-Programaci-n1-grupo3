@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <link rel="stylesheet" href="css/favoritos.css">
+    <link rel="stylesheet" href="css/uikit-rtl.css">
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/login2.css">
+    <!-- JAVA -->
+    <script src="js/favoritos.js" defer></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/avanzado.js"></script>
+</head>
+
+<body>
+    <!-- LOG IN POUPUP -->
+    <div class="center" style="display: none;" id="Loginpoupup">
+        <div class="popup-overlay"></div>
+        <div class="popup">
+            <div class="popup-close" onclick="closeLoginForm()">&times;</div>
+            <div class="form">
+                <!-- FORM -->
+                <div class="avatar">
+                    <img src="img/user.jpeg" alt="">
+                </div>
+                <div class="header">
+                    Iniciar sesión
+                </div>
+                <form onsubmit="return validation()"> 
+                    <div class="element">
+                        <label for="nombre">nombre apellido</label>
+                        <input type="text" name="nombre" value="" placeholder="Nombre Apellido" id="nombre" required>
+                    </div>
+                    <div class="element">
+                        <label for="email" >email</label>
+                        <input type="email" name="email" value="" placeholder="tuemail@gmail.com" id="email" required>
+                    </div>
+                    <div class="element">
+                        <button id="login" type="submit" name="button">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <main class="main">
+        <header class="header">
+            <nav class="arriba">
+                <section class="logo">
+                    <img src="img/logo.jpg" alt="logo" height="100px" width="100%">
+                </section>
+                <section class="search">
+                    <a href="#">
+                        <ion-icon name="search-circle-outline"></ion-icon> Search
+                    </a>
+                </section>
+                
+                <div class="logedIn">
+                    <p id="p_nombre"></p>
+                    <button class='LogOutButton' id="logOut" type="button" name="button">Log Out</button>
+                    <button class='LogOutButton' id="logIn" type="button" name="button" onclick="openloginPopup()">Login</button>
+                </div>
+            </nav>
+            <nav class="abajo">
+                <ul class="opciones">
+                    <li>
+                        <a href="index.html"> Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Recomendados</a>
+                    </li>
+                    <li>
+                        <a href="#"> Series</a>
+                    </li>
+                    <li>
+                        <a href="#">Películas</a>
+                    </li>
+                    <li>
+                        <a href="generos.html">Géneros</a>
+                    </li>
+                    <li>
+                        <a href="favoritos.html">Favoritos</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2 id="titulos">Favoritos</h2>
+            <ul id="peliculasFavoritas">
+            </ul>     
+        </main>     
+        <section class="tapar"></section>
+        <footer>
+            <div class="TOPS">
+              <a href=""><img id="logo" src="img/logo.jpg" alt="logo"></a>
+        
+              <p>
+                Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
+              </p>
+            </div>
+            <div class="redes">
+              <h2>Seguinos en las redes</h2>
+        
+              <p><a href="https://www.instagram.com/agus_arleo/">Agustín Arleo</a></p>
+              <p><a href="https://www.instagram.com//"><a>Maria Laura Rolón</p>
+              <p><a href="https://www.instagram.com//"></a>Federico Bornico </p>
+            </div>
+            <div class="contacto">
+              <h2>Contacto</h2>
+        
+              <p>aarleo@udesa.edu.ar</p>
+              <p>mrolon@udesa.edu.ar</p>
+              <p>fbornico@udesa.edu.ar</p>
+            </div>
+          </footer>
+        </section>
+    </main>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</body>
+
+</html>

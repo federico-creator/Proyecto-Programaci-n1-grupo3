@@ -13,7 +13,7 @@ window.addEventListener("load",function(){
 
         foto.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${datos.poster_path}">`
         if (datos.poster_path == null) {
-            foto.innerHTML = '<img src="img/notfound.jpg">'
+          foto.innerHTML = '<img src="img/notfound.jpg">'
         }
 
         info.innerHTML += `<h2><strong> ${datos.title}</strong></h2>`
