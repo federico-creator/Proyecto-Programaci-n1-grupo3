@@ -10,17 +10,11 @@
     <link rel="stylesheet" href="css/uikit-rtl.css">
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/login.css">
-    <!-- JAVA -->
-    <script src="js/index.js" defer></script>
-    <script src="js/uikit.js"></script>
-    <script src="js/uikit-icons.js"></script>
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>  
-    <script src="js/avanzado.js"></script>
+
 </head>
 
 <body>
-    
+
     <!-- LOG IN POUPUP -->
     <div class="center" style="display: none;" id="Loginpoupup">
         <div class="popup-overlay"></div>
@@ -33,7 +27,7 @@
                 </div>
                 <div class="header">
                     Iniciar sesión
-                    
+
                 </div>
                 <div>
                     <div class="element">
@@ -45,7 +39,8 @@
                         <input type="email" name="email" value="" placeholder="tuemail@gmail.com" id="email" required>
                     </div>
                     <div class="element">
-                        <button id="login" type="button" name="button" onclick="showUserInfo(); closeLoginForm();">Login</button>
+                        <button id="login" type="button" name="button"
+                            onclick="showUserInfo(); closeLoginForm();">Login</button>
                     </div>
                 </div>
             </div>
@@ -66,11 +61,13 @@
                 <div>
                     <p class="Sesion" id="userBadge" style="display:none"></p>
                 </div>
-                
+
                 <div class="logedIn">
                     <p id="p_nombre"></p>
-                    <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log Out</button>
-                    <button class='LogOutButton' id="logIn" type="button" name="button" onclick="openloginPopup()">Login</button>
+                    <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
+                        Out</button>
+                    <button class='LogOutButton' id="logIn" type="button" name="button"
+                        onclick="openloginPopup()">Login</button>
                 </div>
             </nav>
             <nav class="abajo">
@@ -174,34 +171,63 @@
         </div>
 
         <section class="tapar"></section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalBusqueda">Busqueda</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Genero: <select onchange="filtrarPorGenero(this)"></select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer>
             <div class="TOPS">
-              <a href=""><img id="logo" src="img/logo.jpg" alt="logo"></a>
-        
-              <p>
-                Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
-              </p>
+                <a href=""><img id="logo" src="img/logo.jpg" alt="logo"></a>
+
+                <p>
+                    Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
+                </p>
             </div>
             <div class="redes">
-              <h2>Seguinos en las redes</h2>
-        
-              <p><a href="https://www.instagram.com/agus_arleo/">Agustín Arleo</a></p>
-              <p><a href="https://www.instagram.com//"><a>Maria Laura Rolón</p>
-              <p><a href="https://www.instagram.com//"></a>Federico Bornico </p>
+                <h2>Seguinos en las redes</h2>
+
+                <p><a href="https://www.instagram.com/agus_arleo/">Agustín Arleo</a></p>
+                <p><a href="https://www.instagram.com//"><a>Maria Laura Rolón</p>
+                <p><a href="https://www.instagram.com//"></a>Federico Bornico </p>
             </div>
             <div class="contacto">
-              <h2>Contacto</h2>
-        
-              <p>aarleo@udesa.edu.ar</p>
-              <p>mrolon@udesa.edu.ar</p>
-              <p>fbornico@udesa.edu.ar</p>
+                <h2>Contacto</h2>
+
+                <p>aarleo@udesa.edu.ar</p>
+                <p>mrolon@udesa.edu.ar</p>
+                <p>fbornico@udesa.edu.ar</p>
             </div>
-          </footer>
+        </footer>
         </section>
     </main>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="js/login.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/avanzado.js"></script>
 </body>
 
 
