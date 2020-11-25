@@ -52,5 +52,4 @@ window.addEventListener("load",function(){
             slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img class= "imgrecomendadas"src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a></li>`
         });
     })
-
 })
