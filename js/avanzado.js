@@ -6,26 +6,55 @@ window.addEventListener("load", function () {
       //Por cada uno de los elementos del array genres creamos una variable genres
 
       let includeList = document.getElementById('includeList');
-      let excludeList = document.getElementById('excludeList');
+      let anioPelicula = document.getElementById('anioPelicula');
+
       for (let genre of genres) {
         let option = document.createElement('option');
         option.text = genre.name;
         option.value = genre.id;
-        let option2 = document.createElement('option');
-        option2.text = genre.name;
-        option2.value = genre.id;
-
         includeList.add(option);
-        excludeList.add(option2);
       }
+
+      let fecha = new Date();
+
+      for (let i = fecha.getFullYear(); i > 1920; i--) {
+        let option = document.createElement('option');
+        option.text = i;
+        option.value = i;
+        anioPelicula.add(option);
+
+      }
+
+
+
     });
 
 })
 
-function filtrarPorGenero(select) {
-  debugger // avanza con F10   F8 va hasta el final
-  let idOpcionElegida = select.value;
-  let listaDePeliculas = []
-  listaDePeliculas = document.getElementById("listaDePeliculas");
-  let listaFiltrada = listaDePeliculas.filter(pelicula => pelicula.genero == idOpcionElegida)
+
+function buscar(event) {
+  event.preventDefault()
+  fetch("https://api.themoviedb.org/3/movie/popular?api_key=0d278db4bda20f994d6bf90837dc480e&language=en-US&page=1")
+    .then(function (respuesta) {
+      return respuesta.json()
+    })
+    .then(function (datos) {
+      let slider = document.getElementById("peliculasPopulares")
+
+
+
+
+
+      let anioPelicula = document.getElementById('anioPelicula');
+
+
+      let idGenero = document.getElementById('includeList').value;
+      let listaDePeliculas = []
+      listaDePeliculas = document.getElementById("listaDePeliculas");
+      let listaFiltrada = datos.results.filter(pelicula => pelicula.genre_ids.includes(idGenero))
+
+      console.log(listaFiltrada)
+
+    })
+
 }

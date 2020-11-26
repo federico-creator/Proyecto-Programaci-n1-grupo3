@@ -150,7 +150,21 @@ img:hover{
         height: 60px;
     }
 }
-
+/*AVANZADO boton*/
+.avanzado {
+    margin-top:10px;
+    width:10%;
+    height: 10%;
+    background-color: #fff;
+    padding: 5px 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3498db;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    
+} 
 
 
 

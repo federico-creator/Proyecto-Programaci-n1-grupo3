@@ -15,21 +15,28 @@
 </head>
 
 <body>
-    <a id="avanzada" href="#modal-avan" uk-toggle>Busqueda Avanzada</a>
-    <div id="modal-avan" uk-modal>
-        <div id="modal_avanzada" class="uk-modal-dialog uk-modal-body">
-            <h2 class="uk-modal-title">Ingrese su búsqueda</h2>
-            <form class="avana" action="avanzado.html" method="get">
-                <label for="generos">Buscar:</label>
-                <select class="incluir" name="incluir">
-                    <option value="">Ninguno</option>
-                </select>
-
-                <label for="">Excluir</label>
-                <select class="excluir" name="excluir">
-                    <option value="">Ninguno</option>
-                    <!-- api generos -->
-                </select>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalBusqueda">Busqueda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Incluye Genero: <select ide="IncluyeGenero" onchange="filtrarPorGenero(this)"></select>
+                Año película <secti ide="IncluyeGenero" onchange="filtrarPorGenero(this)"></select>
+            </div>
+            <div class="modal-body">
+                Año: <select onchange="filtrarPorGenero(this)"></select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
         </div>
     </div>
     <script src="js/avanzado.js"></script>

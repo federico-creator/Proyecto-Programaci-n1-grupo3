@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/uikit-rtl.css">
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/login.css">
+
 </head>
 
 <body>
@@ -29,18 +40,22 @@
 
                 </div>
                 <div>
-                    <div class="element">
-                        <label for="nombre">nombre apellido</label>
-                        <input type="text" name="nombre" value="" placeholder="Nombre Apellido" id="nombre" required>
-                    </div>
-                    <div class="element">
-                        <label for="email">email</label>
-                        <input type="email" name="email" value="" placeholder="tuemail@gmail.com" id="email" required>
-                    </div>
-                    <div class="element">
-                        <button id="login" type="button" name="button"
-                            onclick="showUserInfo(); closeLoginForm();">Login</button>
-                    </div>
+                    <form action="" method="POST">
+                        <div class="element">
+                            <label for="nombre">nombre apellido</label>
+                            <input type="text" required name="nombre" value="" placeholder="Nombre Apellido"
+                                id="nombre">
+                        </div>
+                        <div class="element">
+                            <label for="email">email</label>
+                            <input type="email" required name="email" value="" placeholder="tuemail@gmail.com"
+                                id="email">
+                        </div>
+                        <div class="element">
+                            <button id="login" type="submit" name="button"
+                                onclick="showUserInfo(); closeLoginForm();">Login</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -57,6 +72,12 @@
                         <ion-icon name="search-circle-outline"></ion-icon> Search
                     </a>
                 </section>
+                <section class="avanzado">
+                <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong">
+                    <ion-icon name="search-circle-outline"></ion-icon> avanzado
+                </a>
+            </section>
+
                 <div>
                     <p class="Sesion" id="userBadge" style="display:none"></p>
                 </div>
@@ -174,28 +195,6 @@
 
         <section class="tapar"></section>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalBusqueda">Busqueda</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Genero: <select onchange="filtrarPorGenero(this)"></select>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <footer>
             <div class="TOPS">
                 <a href=""><img id="logo" src="img/logo.jpg" alt="logo"></a>
@@ -221,6 +220,30 @@
         </footer>
         </section>
     </main>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form method="post" action="resultadobusqueda.html">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalBusqueda"><b>Busqueda</b></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Incluye Genero: <select id="includeList"></select>
+                        Año Película: <select id="anioPelicula"></select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" onclick="buscar(event)">Buscar</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+    </div>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="js/login.js"></script>
     <script src="js/init.js"></script>
