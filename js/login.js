@@ -10,10 +10,11 @@ function closeLoginForm() {
     popup.style.display = 'none';
 }
 
-
-function showUserInfo() {
-    let user = document.getElementById('nombre').value
-    let email = document.getElementById('email').value
+/**
+ * @param user este parametroes el usuario en el login
+ * @param email este parametro es el email en el login
+ */
+function showUserInfo(user,email) {
     // #0 - Obtener datos del usuario
     sessionStorage.setItem('user', user);
     sessionStorage.setItem('email', email);
@@ -57,3 +58,29 @@ function validateEmail(email) {
     formulario.elements.password.focus()
     return true;
   }}
+
+    function logIn(){
+        const user = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+
+        if(validateForm(user, email)){
+            showUserInfo(user,email)
+            closeLoginForm();
+        }
+    
+    }
+
+  function validateForm(user,email){
+    let valid = true;
+    let re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if(!user){
+        valid = false;
+        window.alert('Debe ingresar un usuario');
+    } else if(!email || !re.test(email)){
+        valid = false; 
+        window.alert('Debe ingresar un mail valido');
+    }
+    
+    return valid;
+  }
