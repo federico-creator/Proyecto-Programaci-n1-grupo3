@@ -5,25 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/uikit-rtl.css">
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/login.css">
+  
 </head>
 
 <body>
-
+    
     <!-- LOG IN POUPUP -->
     <div class="center" style="display: none;" id="Loginpoupup">
         <div class="popup-overlay"></div>
@@ -36,32 +33,34 @@
                 </div>
                 <div class="header">
                     Iniciar sesión
-
+                    
                 </div>
                 <div>
-                    <form action="" method="POST">
-                        <div class="element">
-                            <label for="nombre">nombre apellido</label>
-                            <input type="text" required name="nombre" value="" placeholder="Nombre Apellido"
-                                id="nombre">
-                        </div>
-
-                        <div class="element">
-                            <label for="email">email</label>
-                            <input type="email" required name="email" value="" placeholder="tuemail@gmail.com"
-                                id="email">
-                        </div>
-                        <div id="errorEmail"></div>
-                        <div class="element">
-                            <button id="login" type="submit" name="button" onclick="logIn()">Login
-                            </button>
-                        </div>
-                    </form>
+                    <div class="element">
+                        <label for="nombre">nombre apellido</label>
+                        <input type="text" name="nombre" value="" placeholder="Nombre Apellido" id="nombre" required>
+                    </div>
+                    <div class="element">
+                        <label for="email">email</label>
+                        <input type="email" name="email" value="" placeholder="tuemail@gmail.com" id="email" required>
+                    </div>
+                    <div class="element">
+                        <button id="login" type="button" name="button" onclick="showUserInfo(); closeLoginForm();">Login</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     </div>
+
+
+
+  
+
+
+
+
+
     <main class="main">
         <header class="header">
             <nav class="arriba">
@@ -69,26 +68,20 @@
                     <img src="img/logo.jpg" alt="logo" height="100px" width="100%">
                 </section>
                 <section class="search">
-                    <a href="#">
+
+                    <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong">
                         <ion-icon name="search-circle-outline"></ion-icon> Search
                     </a>
+                    
                 </section>
-                <section class="avanzado">
-                    <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong"> <!---Aca me va a llevar al otro html--->
-                        <ion-icon name="search-circle-outline"></ion-icon> avanzado <!---Aca comienza--->
-                    </a>
-                </section>
-
                 <div>
                     <p class="Sesion" id="userBadge" style="display:none"></p>
                 </div>
-
+                
                 <div class="logedIn">
                     <p id="p_nombre"></p>
-                    <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
-                        Out</button>
-                    <button class='LogOutButton' id="logIn" type="button" name="button"
-                        onclick="openloginPopup()">Login</button>
+                    <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log Out</button>
+                    <button class='LogOutButton' id="logIn" type="button" name="button" onclick="openloginPopup()">Login</button>
                 </div>
             </nav>
             <nav class="abajo">
@@ -99,9 +92,11 @@
                     <li>
                         <a href="#">Recomendados</a>
                     </li>
-                    <li class="descubrirPelicula">
+                    <li>
+                        <a href="#"> Series</a>
                     </li>
-                    <li class="descubrirSerie">
+                    <li>
+                        <a href="#">Películas</a>
                     </li>
                     <li>
                         <a href="generos.html">Géneros</a>
@@ -190,66 +185,72 @@
         </div>
 
         <section class="tapar"></section>
-
         <footer>
             <div class="TOPS">
-                <a href=""><img id="logo" src="img/logo.jpg" alt="logo"></a>
-
-                <p>
-                    Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
-                </p>
+              <a href=""><img id="logo" src="img/logo.jpg" alt="logo"></a>
+        
+              <p>
+                Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
+              </p>
             </div>
             <div class="redes">
-                <h2>Seguinos en las redes</h2>
-
-                <p><a href="https://www.instagram.com/agus_arleo/">Agustín Arleo</a></p>
-                <p><a href="https://www.instagram.com//"><a>Maria Laura Rolón</p>
-                <p><a href="https://www.instagram.com//"></a>Federico Bornico </p>
+              <h2>Seguinos en las redes</h2>
+        
+              <p><a href="https://www.instagram.com/agus_arleo/">Agustín Arleo</a></p>
+              <p><a href="https://www.instagram.com//"><a>Maria Laura Rolón</p>
+              <p><a href="https://www.instagram.com//"></a>Federico Bornico </p>
             </div>
             <div class="contacto">
-                <h2>Contacto</h2>
-
-                <p>aarleo@udesa.edu.ar</p>
-                <p>mrolon@udesa.edu.ar</p>
-                <p>fbornico@udesa.edu.ar</p>
+              <h2>Contacto</h2>
+        
+              <p>aarleo@udesa.edu.ar</p>
+              <p>mrolon@udesa.edu.ar</p>
+              <p>fbornico@udesa.edu.ar</p>
             </div>
-        </footer>
+          </footer>
         </section>
+    
+    
+    
+    
     </main>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <form method="post" action="resultadobusqueda.html">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalBusqueda"><b>Busqueda</b></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Incluye Genero: <select id="includeList"></select>
-                        Año Película: <select id="anioPelicula"></select>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary" onclick="buscar(event)">Buscar</button>
-                    </div>
-            </form>
-        </div>
+
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <form method="post" action="resultadobusqueda.html">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBusqueda"><b>Busqueda</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Incluye Genero: <select id="includeList" ></select>
+        Año Película: <select id="anioPelicula" ></select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary" onclick="buscar(event)" >Buscar</button>
+      </div>
+    </form>
     </div>
-    </div>
+  </div>
+</div>
+
+    
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="js/login.js"></script>
     <script src="js/init.js"></script>
+      <!-- JAVA -->
     <script src="js/index.js" defer></script>
     <script src="js/uikit.js"></script>
     <script src="js/uikit-icons.js"></script>
     <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>  
     <script src="js/avanzado.js"></script>
-    <script src="js/descubrir.js"></script>
 </body>
 
 

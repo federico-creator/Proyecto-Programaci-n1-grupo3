@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=9a2ac68be330a24306c03ee0dac49d3a&language=en-US')
+  fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=9a2ac68be330a24306c03ee0dac49d3a&language=en-US`)
     .then(response => response.json())
     .then(data => {
       const genres = data.genres;
@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
 
 function buscar(event) {
   event.preventDefault()
-  fetch("https://api.themoviedb.org/3/movie/popular?api_key=0d278db4bda20f994d6bf90837dc480e&language=en-US&page=1")
+  fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=9a2ac68be330a24306c03ee0dac49d3a&language=en-US`)
     .then(function (respuesta) {
       return respuesta.json()
     })
@@ -49,11 +49,13 @@ function buscar(event) {
 
 
       let idGenero = document.getElementById('includeList').value;
+      console.log("idGenero", idGenero)
       let listaDePeliculas = []
       listaDePeliculas = document.getElementById("listaDePeliculas");
+      console.log("listaDePeliculas", listaDePeliculas)
       let listaFiltrada = datos.results.filter(pelicula => pelicula.genre_ids.includes(idGenero))
+      console.log("listaFiltrada", listaFiltrada)
 
-      console.log(listaFiltrada)
 
     })
 

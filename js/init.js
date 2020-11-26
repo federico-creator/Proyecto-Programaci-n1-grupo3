@@ -1,3 +1,4 @@
+/*DISPLAY NOMBRE DE USUARIO*/  
 window.addEventListener("load", function () {
     const userName = sessionStorage.getItem('user');
     if (userName) {
