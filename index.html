@@ -45,14 +45,17 @@
                             <input type="text" required name="nombre" value="" placeholder="Nombre Apellido"
                                 id="nombre">
                         </div>
+                        
                         <div class="element">
                             <label for="email">email</label>
                             <input type="email" required name="email" value="" placeholder="tuemail@gmail.com"
                                 id="email">
                         </div>
+                        <div id="errorEmail"></div>
                         <div class="element">
                             <button id="login" type="submit" name="button"
-                                onclick="showUserInfo(); closeLoginForm();">Login</button>
+                                onclick="showUserInfo(); closeLoginForm(); validateEmail(email)">Login
+                            </button>
                         </div>
                     </form>
                 </div>

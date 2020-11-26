@@ -34,3 +34,26 @@ function logOut() {
     sessionStorage.removeItem('email');
     badge.style.display = "none";
 }
+
+function validateEmail(email) {
+    let re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    let error = document.getElementById('errorEmail');
+
+
+    if (!re.test(email.value)){ 
+      
+      email.classList.add('is-invalid'); 
+      console.log(errorEmail);
+      error.innerHTML= "Debe colocar un email válido";
+      error.classList.add('alert-danger');
+      //errorEmail.classList.add('alert-danger');
+     // email.addEventListener('change',cambioNombre);
+    return false
+  }else{
+    error.innerHTML= "";
+    error.classList.remove('alert-danger');
+    email.classList.remove('is-invalid'); 
+    email.classList.add('is-valid');
+    formulario.elements.password.focus()
+    return true;
+  }}
