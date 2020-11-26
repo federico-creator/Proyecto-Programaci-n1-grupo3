@@ -11,7 +11,7 @@ window.addEventListener("load",function(){
         var info = document.querySelector(".info");
         var foto = document.querySelector(".foto");
 
-        foto.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${datos.poster_path}">`
+        foto.innerHTML = `<img src="https://image.tmdb.org/t/p/w500/${datos.poster_path}" alt="img/notfound.jpg">`
         if (datos.poster_path == null) {
             foto.innerHTML = '<img src="img/notfound.jpg">'
         }
