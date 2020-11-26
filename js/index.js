@@ -21,20 +21,19 @@ window.addEventListener("load",function(){
             pelicula.addEventListener('click', function(e){
                 console.log("se hizo click");
                 //e.preventDefault()
-                let favo = localStorage.getItem('favop')
-                if( favo == null ){
+                let favop = localStorage.getItem('favop')
+                if( favop == null ){
                     arrayFavoritas = []
                 } 
                 else {
-                    arrayFavoritas = JSON.parse(favo)
+                    arrayFavoritas = JSON.parse(favop)
                 }
                 var prueba = true
-                console.log(pelicula.id);
-                if(favo==null){
+                if(favop==null){
                     prueba = true
                 }
                 else{
-                    for(let i = 0; i<favo.length; i++){
+                    for(let i = 0; i<favop.length; i++){
                         if(pelicula.id==arrayFavoritas[i]){
                             prueba = false
                         }
@@ -44,9 +43,8 @@ window.addEventListener("load",function(){
                     arrayFavoritas.push(pelicula.id)
                 }
                 else{
-                    console.log(`esa pelicula ya está en favoritos`);
+                    console.log(`esa película ya está en favoritos`);
                 }
-                //arrayFavoritas.push(pelicula.id)
                 localStorage.setItem('favop', JSON.stringify(arrayFavoritas))            
             })  
         })      
@@ -82,8 +80,23 @@ window.addEventListener("load",function(){
                 else {
                     arrayFavoritas = JSON.parse(favop)
                 }
-                console.log(pelicula.id);
-                arrayFavoritas.push(pelicula.id)
+                var prueba = true
+                if(favop==null){
+                    prueba = true
+                }
+                else{
+                    for(let i = 0; i<favop.length; i++){
+                        if(pelicula.id==arrayFavoritas[i]){
+                            prueba = false
+                        }
+                    }
+                }
+                if (prueba == true){
+                    arrayFavoritas.push(pelicula.id)
+                }
+                else{
+                    console.log(`esa película ya está en favoritos`);
+                }
                 localStorage.setItem('favop', JSON.stringify(arrayFavoritas))            
             })  
         })   
@@ -120,8 +133,23 @@ window.addEventListener("load",function(){
                 else {
                     arrayFavoritas = JSON.parse(favos)
                 }
-                console.log(serie.id);
-                arrayFavoritas.push(serie.id)
+                var prueba = true
+                if(favos==null){
+                    prueba = true
+                }
+                else{
+                    for(let i = 0; i<favos.length; i++){
+                        if(serie.id==arrayFavoritas[i]){
+                            prueba = false
+                        }
+                    }
+                }
+                if (prueba == true){
+                    arrayFavoritas.push(serie.id)
+                }
+                else{
+                    console.log(`esa serie ya está en favoritos`);
+                }
                 localStorage.setItem('favos', JSON.stringify(arrayFavoritas))            
             })  
         })   
@@ -158,8 +186,23 @@ window.addEventListener("load",function(){
                 else {
                     arrayFavoritas = JSON.parse(favos)
                 }
-                console.log(serie.id);
-                arrayFavoritas.push(serie.id)
+                var prueba = true
+                if(favos==null){
+                    prueba = true
+                }
+                else{
+                    for(let i = 0; i<favos.length; i++){
+                        if(serie.id==arrayFavoritas[i]){
+                            prueba = false
+                        }
+                    }
+                }
+                if (prueba == true){
+                    arrayFavoritas.push(serie.id)
+                }
+                else{
+                    console.log(`esa serie ya está en favoritos`);
+                }
                 localStorage.setItem('favos', JSON.stringify(arrayFavoritas))            
             })  
         })   

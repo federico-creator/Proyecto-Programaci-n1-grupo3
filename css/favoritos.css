@@ -58,7 +58,16 @@ main{
     color: rgb(0, 0, 0);
     text-decoration: #A0A0A0 underline;
 }
-
+.pelicula{
+    border: solid 5px black;
+    padding: 8px;
+    background-color:goldenrod;
+}
+.serie{
+    border: solid 5px black;
+    padding: 8px;
+    background-color:goldenrod;
+}
 
 /*footer*/
 

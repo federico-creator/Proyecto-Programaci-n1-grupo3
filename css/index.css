@@ -94,14 +94,6 @@ img:hover{
     padding: 8px;
     background-color:goldenrod;
 }
-.imgserie{
-    width: 100%;
-    height: 300px;
-}
-/*.favoritos{
-    display: none;
-}*/
-
 /*Aquí iran los media queries*/
 
 @media(min-width: 768px){
