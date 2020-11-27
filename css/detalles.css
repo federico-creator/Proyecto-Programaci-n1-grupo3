@@ -47,7 +47,8 @@ body{
     to {transform: rotate(360deg);}
 }
 
-/*header*/
+/*HEADER*/
+
 .header{
     background-color: #A0A0A0;
     width: 100%;
@@ -64,30 +65,43 @@ body{
 }
 .logo{
     width: 50%;
-    height: 50px;
-    display: none;
 }
 .opciones{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     font-size: 1.5rem;
 }
 
 .opciones li a{
     color: white;
-    text-decoration: none;
 }
 .opciones li a:hover{
     text-decoration: underline;
 }
-
-
-.search a{
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 1.5rem;
+#search{
+    display: none;
+    width: 200px;
+    height: 50%;
 }
+.avanzado{
+    display: none;
+}
+/*AVANZADO boton*/
+.avanzado {
+    margin-top:10px;
+    width:10%;
+    height: 10%;
+    background-color: #fff;
+    padding: 5px 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3498db;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    
+} 
+
 
 /*main*/
 .foto{
@@ -160,6 +174,64 @@ body{
     border-radius: 10px;
     border: solid ghostwhite;
 }
+/*footer*/
+footer {
+    width: 100%;
+    background: gray;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+footer .THDB {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 0.8rem;
+    margin: 2%;
+    color: rgba(255, 255, 255, 0.8);
+}
+  
+footer #logo {
+    width: 50%;
+    margin-top: 5%;
+}
+  
+footer .redes {
+    margin: 2%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer .redes h2 {
+    font-size: 1.5rem;
+}
+  
+footer div a {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.1rem;
+}
+  
+footer .contacto {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 2%;
+}
+  
+footer .contacto p {
+    color: rgba(255, 255, 255, 0.8);
+}
+  
+footer .redes h2, .contacto h2 {
+    color: rgba(255, 255, 255, 0.67)
+}
+
+footer .contacto {
+    display: none;
+}
 
 
 
@@ -221,153 +293,3 @@ body{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-    width: 100%;
-    background: gray;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-  
-  footer .TOPS {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    font-size: 0.8rem;
-    margin: 2%;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  footer #logo {
-    width: 50%;
-    margin-top: 5%;
-  }
-  
-  footer .redes {
-    margin: 2%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  footer div a {
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 1.1rem;
-  }
-  
-  footer .contacto {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin: 2%;
-  }
-  
-  footer .contacto p {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  footer .redes h2, .contacto h2 {
-    color: rgba(255, 255, 255, 0.67)
-  }
