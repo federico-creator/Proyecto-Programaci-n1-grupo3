@@ -1,4 +1,7 @@
 window.addEventListener("load",function(){
+    let contenedor = document.querySelector(".contenedor-carga")
+    contenedor.style.visibility = "hidden";
+    contenedor.style.opacity = "0";
     let detallepelicula = location.search
     let detallePeliculaObjeto = new URLSearchParams(detallepelicula)
     let id = detallePeliculaObjeto.get("id")

@@ -1,4 +1,7 @@
 window.addEventListener("load",function(){
+    let contenedor = document.querySelector(".contenedor-carga")
+    contenedor.style.visibility = "hidden";
+    contenedor.style.opacity = "0";
     var querystring = location.search;
     var query2 = new URLSearchParams(querystring)
     var id = query2.get("id")
