@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     
-    <link rel="stylesheet" href="css/buscador.css">
     <link rel="stylesheet" href="css/favoritos.css">
     <link rel="stylesheet" href="css/uikit-rtl.css">
     <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/login2.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- JAVA -->
     <script src="js/funciones.js"></script>
@@ -20,10 +19,14 @@
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/login.js"></script>
-    <script src="js/avanzado.js"></script>
+    <script src="js/descubrir.js"></script>
 </head>
 
 <body>
+    <div class="contenedor-carga">
+        <div class="carga">
+        </div>
+    </div>
     <!-- LOG IN POUPUP -->
     <div class="center" style="display: none;" id="Loginpoupup">
         <div class="popup-overlay"></div>
@@ -36,20 +39,28 @@
                 </div>
                 <div class="header">
                     Iniciar sesión
+
                 </div>
-                <form onsubmit="return validation()"> 
-                    <div class="element">
-                        <label for="nombre">nombre apellido</label>
-                        <input type="text" name="nombre" value="" placeholder="Nombre Apellido" id="nombre" required>
-                    </div>
-                    <div class="element">
-                        <label for="email" >email</label>
-                        <input type="email" name="email" value="" placeholder="tuemail@gmail.com" id="email" required>
-                    </div>
-                    <div class="element">
-                        <button id="login" type="submit" name="button">Login</button>
-                    </div>
-                </form>
+                <div>
+                    <form action="" method="POST">
+                        <div class="element">
+                            <label for="nombre">nombre apellido</label>
+                            <input type="text" required name="nombre" value="" placeholder="Nombre Apellido"
+                                id="nombre">
+                        </div>
+
+                        <div class="element">
+                            <label for="email">email</label>
+                            <input type="email" required name="email" value="" placeholder="tuemail@gmail.com"
+                                id="email">
+                        </div>
+                        <div id="errorEmail"></div>
+                        <div class="element">
+                            <button id="login" type="submit" name="button" onclick="logIn()">Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -57,40 +68,37 @@
     <main class="main">
         <header class="header">
             <nav class="arriba">
-                <section class="logo">
-                    <img src="img/logo.jpg" alt="logo" height="100px" width="100%">
+                <section>
+                    <img src="img/logo.jpg" class="logo" alt="logo">
                 </section>
-                <section class="search">
-                    <a href="#">
-                        <ion-icon name="search-circle-outline"></ion-icon> Search
-                    </a>
+                <section>
+                    <div>
+                        <p class="Sesion" id="userBadge" style="display:none"></p>
+                    </div>
+    
+                    <div class="logedIn">
+                        <p id="p_nombre"></p>
+                        <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
+                            Out</button>
+                        <button class='LogOutButton' id="logIn" type="button" name="button"
+                            onclick="openloginPopup()">Login</button>
+                    </div>
                 </section>
-                
-                <div class="logedIn">
-                    <p id="p_nombre"></p>
-                    <button class='LogOutButton' id="logOut" type="button" name="button">Log Out</button>
-                    <button class='LogOutButton' id="logIn" type="button" name="button" onclick="openloginPopup()">Login</button>
-                </div>
             </nav>
             <nav class="abajo">
                 <ul class="opciones">
                     <li>
-                        <a href="index.html"> Home</a>
+                        <a href="index.html"> #Home</a>
+                    </li>
+                    <li class="descubrirPelicula">
+                    </li>
+                    <li class="descubrirSerie"> 
                     </li>
                     <li>
-                        <a href="#">Recomendados</a>
+                        <a href="generos.html">#Géneros</a>
                     </li>
                     <li>
-                        <a href="#"> Series</a>
-                    </li>
-                    <li>
-                        <a href="#">Películas</a>
-                    </li>
-                    <li>
-                        <a href="generos.html">Géneros</a>
-                    </li>
-                    <li>
-                        <a href="favoritos.html">Favoritos</a>
+                        <a href="favoritos.html">#Favoritos</a>
                     </li>
                 </ul>
             </nav>
@@ -134,29 +142,31 @@
         </main>     
         <section class="tapar"></section>
         <footer>
-            <div class="TOPS">
-              <a href=""><img id="logo" src="img/logo.jpg" alt="logo"></a>
-        
-              <p>
-                Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
-              </p>
+            <div class="THDB">
+                <a href=""><img id="logo" src="img/legal.png" alt="logo TMBD"></a>
+
+                <p>
+                    Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
+                </p>
+                <p>
+                    Todos los derechos reservados
+                </p>
             </div>
             <div class="redes">
-              <h2>Seguinos en las redes</h2>
-        
-              <p><a href="https://www.instagram.com/agus_arleo/">Agustín Arleo</a></p>
-              <p><a href="https://www.instagram.com//"><a>Maria Laura Rolón</p>
-              <p><a href="https://www.instagram.com//"></a>Federico Bornico </p>
+                <h2>Seguinos en las redes</h2>
+
+                <p><a href="https://www.instagram.com/agus_arleo/">Agustín Arleo</a></p>
+                <p><a href="https://www.instagram.com//"><a>Maria Laura Rolón</p>
+                <p><a href="https://www.instagram.com//"></a>Federico Bornico </p>
             </div>
             <div class="contacto">
-              <h2>Contacto</h2>
-        
-              <p>aarleo@udesa.edu.ar</p>
-              <p>mrolon@udesa.edu.ar</p>
-              <p>fbornico@udesa.edu.ar</p>
+                <h2>Contacto</h2>
+
+                <p>aarleo@udesa.edu.ar</p>
+                <p>mrolon@udesa.edu.ar</p>
+                <p>fbornico@udesa.edu.ar</p>
             </div>
-          </footer>
-        </section>
+        </footer>
     </main>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>

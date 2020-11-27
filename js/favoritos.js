@@ -1,4 +1,7 @@
 window.addEventListener("load", function() {
+    let contenedor = document.querySelector(".contenedor-carga")
+    contenedor.style.visibility = "hidden";
+    contenedor.style.opacity = "0";
     let idPeliculasFavoritas =  JSON.parse(localStorage.getItem('favop'))
     if(idPeliculasFavoritas== null){
         console.log(`no hay peliculas favoritas`);
@@ -11,7 +14,7 @@ window.addEventListener("load", function() {
             })
             .then(function(datos){
                 let slider = document.getElementById("peliculasFavoritas")
-                slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${datos.id}"> <img src="https://image.tmdb.org/t/p/w500/${datos.poster_path}"></a>
+                slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${datos.id}"> <img class="destacar" src="https://image.tmdb.org/t/p/w500/${datos.poster_path}"></a>
                 <div> 
                 <button id="${datos.id}" type="send" name="quitarFavPeli" class="btn btn-danger btn-block" onclick= 'sacarDeMiListaPeliculas(${datos.id})'><strong>Quitar de Favoritos</strong></button>
                 </div>
@@ -36,7 +39,7 @@ window.addEventListener("load", function() {
             })
             .then(function(datos){
                 let slider = document.getElementById("seriesFavoritas")
-                slider.innerHTML += `<li class="serie"><a href="serieDetail.html?id=${datos.id}"> <img src="https://image.tmdb.org/t/p/w500/${datos.poster_path}"></a>
+                slider.innerHTML += `<li class="serie"><a href="serieDetail.html?id=${datos.id}"> <img class="destacar" src="https://image.tmdb.org/t/p/w500/${datos.poster_path}"></a>
                 <div> 
                 <button id="${datos.id}" type="send" name="quitarFavPeli" class="btn btn-danger btn-block" onclick= 'sacarDeMiListaSeries(${datos.id})'><strong>Quitar de Favoritos</strong></button>
                 </div>
