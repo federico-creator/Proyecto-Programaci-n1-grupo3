@@ -21,6 +21,41 @@ img:hover{
     border: solid ghostwhite;
 }
 
+/*spinner carga*/
+.contenedor-carga{
+    background-color: rgba(250, 240, 245, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 2s ease ;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+    z-index: 10000;
+}
+
+.carga{
+    border: 15px solid #ccc;
+    border-top-color: #f4266a ;
+    border-top-style: groove;
+    height: 13.3%;
+    width: 7%;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 2.5s linear infinite ;
+    -o-animation: girar 2.5s linear infinite;
+    animation: girar 2.5s linear infinite;
+}
+
+@keyframes girar{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
 /*HEADER*/
 
 .header{
@@ -53,6 +88,13 @@ img:hover{
 .opciones li a:hover{
     text-decoration: underline;
 }
+.search{
+    display: none;
+}
+.avanzado{
+    display: none;
+}
+
 
 
 .search a{
@@ -94,14 +136,6 @@ img:hover{
     padding: 8px;
     background-color:goldenrod;
 }
-.imgserie{
-    width: 100%;
-    height: 300px;
-}
-/*.favoritos{
-    display: none;
-}*/
-
 /*Aquí iran los media queries*/
 
 @media(min-width: 768px){
@@ -123,6 +157,12 @@ img:hover{
     .fondo{
         background-image: url(../img/fondo\ tablet.jpg);
         height: 300px;
+    }
+    .search{
+        display: block;
+    }
+    .avanzado{
+        display: block;
     }
 }
 

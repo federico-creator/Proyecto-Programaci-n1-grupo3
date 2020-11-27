@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=9a2ac68be330a24306c03ee0dac49d3a&language=en-US')
+  fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=9a2ac68be330a24306c03ee0dac49d3a&language=en-US`)
     .then(response => response.json())
     .then(data => {
       const genres = data.genres;
@@ -7,7 +7,8 @@ window.addEventListener("load", function () {
 
       let includeList = document.getElementById('includeList');
       let anioPelicula = document.getElementById('anioPelicula');
-
+      let serieoPelicula = document.getElementById('serieoPelicula');
+     
       for (let genre of genres) {
         let option = document.createElement('option');
         option.text = genre.name;
@@ -16,45 +17,34 @@ window.addEventListener("load", function () {
       }
 
       let fecha = new Date();
-
       for (let i = fecha.getFullYear(); i > 1920; i--) {
         let option = document.createElement('option');
         option.text = i;
         option.value = i;
         anioPelicula.add(option);
-
       }
-
-
-
     });
-
 })
 
 
 function buscar(event) {
-  event.preventDefault()
-  fetch("https://api.themoviedb.org/3/movie/popular?api_key=0d278db4bda20f994d6bf90837dc480e&language=en-US&page=1")
-    .then(function (respuesta) {
-      return respuesta.json()
-    })
-    .then(function (datos) {
-      let slider = document.getElementById("peliculasPopulares")
+  event.preventDefault();
 
+  let listaGenerosElem = document.getElementById('includeList');
+  let generoNombre = listaGenerosElem.options[listaGenerosElem.selectedIndex].text;
+  let generoID = listaGenerosElem.value;
+  let anioPelicula = document.getElementById('anioPelicula').value;
 
+  window.location.href = `xgeneropelicula.html?id=${generoID}&name=${generoNombre}&year=${anioPelicula}`;
+}
 
+function buscar2(event) {
+  event.preventDefault();
 
+  let listaGenerosElem = document.getElementById('includeList');
+  let generoNombre = listaGenerosElem.options[listaGenerosElem.selectedIndex].text;
+  let generoID = listaGenerosElem.value;
+  let anioPelicula = document.getElementById('anioPelicula').value;
 
-      let anioPelicula = document.getElementById('anioPelicula');
-
-
-      let idGenero = document.getElementById('includeList').value;
-      let listaDePeliculas = []
-      listaDePeliculas = document.getElementById("listaDePeliculas");
-      let listaFiltrada = datos.results.filter(pelicula => pelicula.genre_ids.includes(idGenero))
-
-      console.log(listaFiltrada)
-
-    })
-
+  window.location.href = `xgeneroserie.html?id=${generoID}&name=${generoNombre}&year=${anioPelicula}`;
 }

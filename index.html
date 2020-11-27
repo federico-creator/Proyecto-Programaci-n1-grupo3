@@ -24,7 +24,10 @@
 </head>
 
 <body>
-
+    <div class="contenedor-carga">
+        <div class="carga">
+        </div>
+    </div>
     <!-- LOG IN POUPUP -->
     <div class="center" style="display: none;" id="Loginpoupup">
         <div class="popup-overlay"></div>
@@ -46,14 +49,16 @@
                             <input type="text" required name="nombre" value="" placeholder="Nombre Apellido"
                                 id="nombre">
                         </div>
+
                         <div class="element">
                             <label for="email">email</label>
                             <input type="email" required name="email" value="" placeholder="tuemail@gmail.com"
                                 id="email">
                         </div>
+                        <div id="errorEmail"></div>
                         <div class="element">
-                            <button id="login" type="submit" name="button"
-                                onclick="showUserInfo(); closeLoginForm();">Login</button>
+                            <button id="login" type="submit" name="button" onclick="logIn()">Login
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -64,8 +69,8 @@
     <main class="main">
         <header class="header">
             <nav class="arriba">
-                <section class="logo">
-                    <img src="img/logo.jpg" alt="logo" height="100px" width="100%">
+                <section>
+                    <img src="img/logo.jpg" class="logo" alt="logo">
                 </section>
             </section>
                 <nav class="uk-navbar-container" uk-navbar>
@@ -86,14 +91,26 @@
                 <div>
                     <p class="Sesion" id="userBadge" style="display:none"></p>
                 </div>
+                    <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong">
+                        <!---Aca me va a llevar al otro html--->
+                        <ion-icon name="search-circle-outline"></ion-icon> filtro pelicula
+                        <!---Aca comienza--->
+                    </a>
+                </section>
 
-                <div class="logedIn">
-                    <p id="p_nombre"></p>
-                    <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
-                        Out</button>
-                    <button class='LogOutButton' id="logIn" type="button" name="button"
-                        onclick="openloginPopup()">Login</button>
-                </div>
+                <section>
+                    <div>
+                        <p class="Sesion" id="userBadge" style="display:none"></p>
+                    </div>
+    
+                    <div class="logedIn">
+                        <p id="p_nombre"></p>
+                        <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
+                            Out</button>
+                        <button class='LogOutButton' id="logIn" type="button" name="button"
+                            onclick="openloginPopup()">Login</button>
+                    </div>
+                </section>
             </nav>
             <nav class="abajo">
                 <ul class="opciones">
@@ -197,7 +214,7 @@
 
         <footer>
             <div class="TOPS">
-                <a href=""><img id="logo" src="img/logo.jpg" alt="logo"></a>
+                <a href=""><img id="logo" src="img/legal.png" alt="logo TMBD"></a>
 
                 <p>
                     Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
@@ -220,29 +237,32 @@
         </footer>
         </section>
     </main>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <form method="post" action="resultadobusqueda.html">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalBusqueda"><b>Busqueda</b></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Incluye Genero: <select id="includeList"></select>
-                        Año Película: <select id="anioPelicula"></select>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary" onclick="buscar(event)">Buscar</button>
-                    </div>
-            </form>
-        </div>
-    </div>
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <form method="post" action="resultadobusqueda.html">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="modalBusqueda"><b>Busqueda</b></h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div class="modal-body">
+                     <br>
+                     Incluye Genero: <select id="includeList"></select>
+                     <br>
+                     Contenido de época: <select id="anioPelicula"></select>
+                 </div>
+                 <div class="modal-footer">
+                     <button type="submit" class="btn btn-secondary" onclick="buscar2(event)">Buscar Serie</button>
+                     <button type="submit" class="btn btn-primary" onclick="buscar(event)">Buscar Pelicula</button>
+                 </div>
+         </form>
+     </div>
+ </div>
+    
     </div>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="js/login.js"></script>
