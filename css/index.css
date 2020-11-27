@@ -224,51 +224,6 @@ img:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
     width: 100%;
     background: gray;
@@ -319,3 +274,24 @@ footer {
   footer .redes h2, .contacto h2 {
     color: rgba(255, 255, 255, 0.67)
   }
+  @media(min-width: 768px){
+    .opciones{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 10px auto;
+    }
+
+}
+
+@media (min-width: 1020px){
+    
+    .opciones{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px auto;
+        width: 100%;
+    }
+    .tapar{
+        height: 60px;
+    }
+}
