@@ -10,10 +10,7 @@ function closeLoginForm() {
     popup.style.display = 'none';
 }
 
-/**
- * @param user este parametroes el usuario en el login
- * @param email este parametro es el email en el login
- */
+
 function showUserInfo(user,email) {
     // #0 - Obtener datos del usuario
     sessionStorage.setItem('user', user);
@@ -47,8 +44,7 @@ function validateEmail(email) {
       console.log(errorEmail);
       error.innerHTML= "Debe colocar un email válido";
       error.classList.add('alert-danger');
-      //errorEmail.classList.add('alert-danger');
-     // email.addEventListener('change',cambioNombre);
+      
     return false
   }else{
     error.innerHTML= "";
