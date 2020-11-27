@@ -76,13 +76,14 @@ img{
 
 .opciones li a{
     color: white;
-    text-decoration: none;
 }
 .opciones li a:hover{
     text-decoration: underline;
 }
-.search{
+#search{
     display: none;
+    width: 200px;
+    height: 50%;
 }
 .avanzado{
     display: none;
@@ -102,16 +103,6 @@ img{
     text-align: center;
     
 } 
-
-
-
-.search a{
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 1.5rem;
-}
-
 
 /*INTRO*/
 .fondo{
@@ -231,7 +222,7 @@ footer .contacto {
         background-image: url(../img/fondo\ tablet.jpg);
         height: 300px;
     }
-    .search{
+    #search{
         display: block;
     }
     .avanzado{
