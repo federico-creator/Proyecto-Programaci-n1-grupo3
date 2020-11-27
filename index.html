@@ -74,10 +74,13 @@
                     </a>
                 </section>
                 <section class="avanzado">
-                    <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong"> <!---Aca me va a llevar al otro html--->
-                        <ion-icon name="search-circle-outline"></ion-icon> avanzado <!---Aca comienza--->
+                    <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong">
+                        <!---Aca me va a llevar al otro html--->
+                        <ion-icon name="search-circle-outline"></ion-icon> filtro pelicula
+                        <!---Aca comienza--->
                     </a>
                 </section>
+
 
                 <div>
                     <p class="Sesion" id="userBadge" style="display:none"></p>
@@ -216,29 +219,32 @@
         </footer>
         </section>
     </main>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <form method="post" action="resultadobusqueda.html">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalBusqueda"><b>Busqueda</b></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Incluye Genero: <select id="includeList"></select>
-                        Año Película: <select id="anioPelicula"></select>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary" onclick="buscar(event)">Buscar</button>
-                    </div>
-            </form>
-        </div>
-    </div>
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalBusqueda"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <form method="post" action="resultadobusqueda.html">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="modalBusqueda"><b>Busqueda</b></h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div class="modal-body">
+                     <br>
+                     Incluye Genero: <select id="includeList"></select>
+                     <br>
+                     Contenido de época: <select id="anioPelicula"></select>
+                 </div>
+                 <div class="modal-footer">
+                     <button type="submit" class="btn btn-secondary" onclick="buscar2(event)">Buscar Serie</button>
+                     <button type="submit" class="btn btn-primary" onclick="buscar(event)">Buscar Pelicula</button>
+                 </div>
+         </form>
+     </div>
+ </div>
+    
     </div>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="js/login.js"></script>

@@ -7,6 +7,8 @@ window.addEventListener("load", function () {
 
       let includeList = document.getElementById('includeList');
       let anioPelicula = document.getElementById('anioPelicula');
+      let serieoPelicula = document.getElementById('serieoPelicula');
+     
       for (let genre of genres) {
         let option = document.createElement('option');
         option.text = genre.name;
@@ -34,4 +36,15 @@ function buscar(event) {
   let anioPelicula = document.getElementById('anioPelicula').value;
 
   window.location.href = `xgeneropelicula.html?id=${generoID}&name=${generoNombre}&year=${anioPelicula}`;
+}
+
+function buscar2(event) {
+  event.preventDefault();
+
+  let listaGenerosElem = document.getElementById('includeList');
+  let generoNombre = listaGenerosElem.options[listaGenerosElem.selectedIndex].text;
+  let generoID = listaGenerosElem.value;
+  let anioPelicula = document.getElementById('anioPelicula').value;
+
+  window.location.href = `xgeneroserie.html?id=${generoID}&name=${generoNombre}&year=${anioPelicula}`;
 }
