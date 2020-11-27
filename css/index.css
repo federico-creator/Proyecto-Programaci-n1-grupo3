@@ -14,13 +14,6 @@ li{
 img{
     width: 100%;
 }
-img:hover{
-    transform:scale(0.97);
-    -ms-transform:scale(0.97);
-    border-radius: 10px;
-    border: solid ghostwhite;
-}
-
 /*spinner carga*/
 .contenedor-carga{
     background-color: rgba(250, 240, 245, 0.9);
@@ -77,7 +70,7 @@ img:hover{
 }
 .opciones{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     font-size: 1.5rem;
 }
 
@@ -94,6 +87,21 @@ img:hover{
 .avanzado{
     display: none;
 }
+/*AVANZADO boton*/
+.avanzado {
+    margin-top:10px;
+    width:10%;
+    height: 10%;
+    background-color: #fff;
+    padding: 5px 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3498db;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    
+} 
 
 
 
@@ -136,6 +144,71 @@ img:hover{
     padding: 8px;
     background-color:goldenrod;
 }
+.destacar:hover{
+    transform:scale(0.97);
+    -ms-transform:scale(0.97);
+    border-radius: 10px;
+    border: solid ghostwhite;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    background: gray;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+footer .THDB {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 0.8rem;
+    margin: 2%;
+    color: rgba(255, 255, 255, 0.8);
+}
+  
+footer #logo {
+    width: 50%;
+    margin-top: 5%;
+}
+  
+footer .redes {
+    margin: 2%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer .redes h2 {
+    font-size: 1.5rem;
+}
+  
+footer div a {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.1rem;
+}
+  
+footer .contacto {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 2%;
+}
+  
+footer .contacto p {
+    color: rgba(255, 255, 255, 0.8);
+}
+  
+footer .redes h2, .contacto h2 {
+    color: rgba(255, 255, 255, 0.67)
+}
+
+footer .contacto {
+    display: none;
+}
 /*Aquí iran los media queries*/
 
 @media(min-width: 768px){
@@ -164,6 +237,9 @@ img:hover{
     .avanzado{
         display: block;
     }
+    footer .contacto {
+        display: block;
+    }
 }
 
 @media (min-width: 1020px){
@@ -190,172 +266,3 @@ img:hover{
         height: 60px;
     }
 }
-/*AVANZADO boton*/
-.avanzado {
-    margin-top:10px;
-    width:10%;
-    height: 10%;
-    background-color: #fff;
-    padding: 5px 5px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #3498db;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-    width: 100%;
-    background: gray;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-  
-  footer .TOPS {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    font-size: 0.8rem;
-    margin: 2%;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  footer #logo {
-    width: 50%;
-    margin-top: 5%;
-  }
-  
-  footer .redes {
-    margin: 2%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  footer div a {
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 1.1rem;
-  }
-  
-  footer .contacto {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin: 2%;
-  }
-  
-  footer .contacto p {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  footer .redes h2, .contacto h2 {
-    color: rgba(255, 255, 255, 0.67)
-  }

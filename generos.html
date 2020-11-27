@@ -8,32 +8,79 @@
     <link rel="stylesheet" href="css/uikit-rtl.css">
     <link rel="stylesheet" href="css/uikit.css">
     <!-- JAVA -->
-    <script src="js/uikit.js"></script>
-    <script src="js/uikit-icons.js"></script>
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit.js" defer></script>
+    <script src="js/uikit-icons.js" defer></script>
+    <script src="js/uikit.min.js" defer></script>
+    <script src="js/uikit-icons.min.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/init.js" defer></script>
 </head>
 <body>
-    <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
+    <!-- LOG IN POUPUP -->
+    <div class="center" style="display: none;" id="Loginpoupup">
+        <div class="popup-overlay"></div>
+        <div class="popup">
+            <div class="popup-close" onclick="closeLoginForm()">&times;</div>
+            <div class="form">
+                <!-- FORM -->
+                <div class="avatar">
+                    <img src="img/user.jpeg" alt="">
+                </div>
+                <div class="header">
+                    Iniciar sesión
+
+                </div>
+                <div>
+                    <form action="" method="POST">
+                        <div class="element">
+                            <label for="nombre">nombre apellido</label>
+                            <input type="text" required name="nombre" value="" placeholder="Nombre Apellido"
+                                id="nombre">
+                        </div>
+
+                        <div class="element">
+                            <label for="email">email</label>
+                            <input type="email" required name="email" value="" placeholder="tuemail@gmail.com"
+                                id="email">
+                        </div>
+                        <div id="errorEmail"></div>
+                        <div class="element">
+                            <button id="login" type="submit" name="button" onclick="logIn()">Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <main class="main"> 
         <header class="header">
             <nav class="arriba">
-                <section class="logo">
-                    <img src="img/logo.jpg" alt="logo" height="100px" width="100%" >
+                <section>
+                    <img src="img/logo.jpg" class="logo" alt="logo">
                 </section>
                 <section class="search">
                     <a href="#"><ion-icon name="search-circle-outline"></ion-icon> Search</a>
+                </section>
+                <section>
+                    <div>
+                        <p class="Sesion" id="userBadge" style="display:none"></p>
+                    </div>
+    
+                    <div class="logedIn">
+                        <p id="p_nombre"></p>
+                        <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
+                            Out</button>
+                        <button class='LogOutButton' id="logIn" type="button" name="button"
+                            onclick="openloginPopup()">Login</button>
+                    </div>
                 </section>
             </nav>
             <nav class="abajo">
                 <ul class="opciones">
                     <li>
                         <a href="index.html"> Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Recomendados</a>
                     </li>
                     <li>
                         <a href="#"> Series</a>
