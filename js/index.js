@@ -11,7 +11,7 @@ window.addEventListener("load",function(){
     .then(function(datos){
         let slider = document.getElementById("peliculasPopulares")
         datos.results.forEach(d => {
-            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
+            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img class="destacar" src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
             <div> 
             <button id="${d.id}" type="send" name="favoritospelispop" class="btn btn-success btn-block favoritospelispop"><strong>agregar a favoritos</strong></button>
             </div>
@@ -63,7 +63,7 @@ window.addEventListener("load",function(){
     .then(function(datos){
         let slider = document.getElementById("peliculasEstreno")
         datos.results.forEach(d => {
-            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
+            slider.innerHTML += `<li class="pelicula"><a href="movieDetail.html?id=${d.id}"> <img class="destacar" src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
             <div> 
             <button id="${d.id}" type="send" name="favoritospelisest" class="btn btn-success btn-block favoritospelisest"><strong>agregar a favoritos</strong></button>
             </div>
@@ -116,7 +116,7 @@ window.addEventListener("load",function(){
     .then(function(datos){
         let slider = document.getElementById("seriesPopulares")
         datos.results.forEach(d => {
-            slider.innerHTML += `<li class="serie"><a href="serieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
+            slider.innerHTML += `<li class="serie"><a href="serieDetail.html?id=${d.id}"> <img class="destacar" src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
             <div> 
             <button id="${d.id}" type="send" name="favoritossereriepop" class="btn btn-success btn-block favoritossereriepop"><strong>agregar a favoritos</strong></button>
             </div>
@@ -169,7 +169,7 @@ window.addEventListener("load",function(){
     .then(function(datos){
         let slider = document.getElementById("seriesEmision")
         datos.results.forEach(d => {
-            slider.innerHTML += `<li class="serie"><a href="serieDetail.html?id=${d.id}"> <img src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
+            slider.innerHTML += `<li class="serie"><a href="serieDetail.html?id=${d.id}"> <img class="destacar" src="https://image.tmdb.org/t/p/w500/${d.poster_path}"></a>
             <div> 
             <button id="${d.id}" type="send" name="favoritossererieem" class="btn btn-success btn-block favoritossererieem"><strong>agregar a favoritos</strong></button>
             </div>
