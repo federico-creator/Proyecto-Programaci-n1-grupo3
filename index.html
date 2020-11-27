@@ -23,7 +23,10 @@
 </head>
 
 <body>
-
+    <div class="contenedor-carga">
+        <div class="carga">
+        </div>
+    </div>
     <!-- LOG IN POUPUP -->
     <div class="center" style="display: none;" id="Loginpoupup">
         <div class="popup-overlay"></div>
@@ -65,8 +68,8 @@
     <main class="main">
         <header class="header">
             <nav class="arriba">
-                <section class="logo">
-                    <img src="img/logo.jpg" alt="logo" height="100px" width="100%">
+                <section>
+                    <img src="img/logo.jpg" class="logo" alt="logo">
                 </section>
                 <section class="search">
                     <a href="#">
@@ -81,18 +84,19 @@
                     </a>
                 </section>
 
-
-                <div>
-                    <p class="Sesion" id="userBadge" style="display:none"></p>
-                </div>
-
-                <div class="logedIn">
-                    <p id="p_nombre"></p>
-                    <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
-                        Out</button>
-                    <button class='LogOutButton' id="logIn" type="button" name="button"
-                        onclick="openloginPopup()">Login</button>
-                </div>
+                <section>
+                    <div>
+                        <p class="Sesion" id="userBadge" style="display:none"></p>
+                    </div>
+    
+                    <div class="logedIn">
+                        <p id="p_nombre"></p>
+                        <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
+                            Out</button>
+                        <button class='LogOutButton' id="logIn" type="button" name="button"
+                            onclick="openloginPopup()">Login</button>
+                    </div>
+                </section>
             </nav>
             <nav class="abajo">
                 <ul class="opciones">
