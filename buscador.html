@@ -4,19 +4,153 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Buscador</title>
-      <script src="js/search.js"></script>
+      <link rel="stylesheet" href="css/uikit-rtl.css">
+      <link rel="stylesheet" href="css/uikit.css">
+      <link rel="stylesheet" href="css/login.css">
+      <link rel="stylesheet" href="css/buscador.css">
+    
+      <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js" defer></script>
+      <script src="js/search.js" defer></script>
+      <script src="js/init.js" defer></script>
+      <script src="js/uikit.js" defer></script>
+      <script src="js/uikit-icons.js" defer></script>
+      <script src="js/uikit.min.js" defer></script>
+      <script src="js/uikit-icons.min.js" defer></script>
+      <script src="js/avanzado.js" defer></script>
+      <script src="js/descubrir.js" defer></script>
   </head>
   <body>
-    <main>
-        <h1 id="titulos" class="primero">
-          <!-- Busqueda -->
-        </h1>
-        <div class="div-resultados">
-          <ul class="resultados">
-            <!-- api -->
-          </ul>
-        </div>
-      </main>  
+    <div class="contenedor-carga">
+      <div class="carga">
+      </div>
+  </div>
+  <!-- LOG IN POUPUP -->
+  <div class="center" style="display: none;" id="Loginpoupup">
+      <div class="popup-overlay"></div>
+      <div class="popup">
+          <div class="popup-close" onclick="closeLoginForm()">&times;</div>
+          <div class="form">
+              <!-- FORM -->
+              <div class="avatar">
+                  <img src="img/user.jpeg" alt="">
+              </div>
+              <div class="header">
+                  Iniciar sesión
+
+              </div>
+              <div>
+                  <form action="" method="POST">
+                      <div class="element">
+                          <label for="nombre">nombre apellido</label>
+                          <input type="text" required name="nombre" value="" placeholder="Nombre Apellido"
+                              id="nombre">
+                      </div>
+
+                      <div class="element">
+                          <label for="email">email</label>
+                          <input type="email" required name="email" value="" placeholder="tuemail@gmail.com"
+                              id="email">
+                      </div>
+                      <div id="errorEmail"></div>
+                      <div class="element">
+                          <button id="login" type="submit" name="button" onclick="logIn()">Login
+                          </button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  <main class="main">
+      <header class="header">
+          <nav class="arriba">
+              <section>
+                  <img src="img/logo.jpg" class="logo" alt="logo">
+              </section>
+              </section>
+                  <nav id="search" class="uk-navbar-container" uk-navbar>
+                      <div class="conenedor_buscador">
+                      <form class="uk-search uk-search-navbar" action="buscador.html" method="get">
+                          <span id="SpanBusqueda" uk-search-icon></span>
+                          <input class="uk-search-input" type="search" placeholder="Search" name="busqueda">
+                      </form>
+                      </div>
+                  </nav>
+              </section>
+              <section class="avanzado">
+                  <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong">
+                      <ion-icon name="search-circle-outline"></ion-icon> Avanzado
+                  </a>
+              </section>
+              <section>
+                  <div>
+                      <p class="Sesion" id="userBadge" style="display:none"></p>
+                  </div>
+  
+                  <div class="logedIn">
+                      <p id="p_nombre"></p>
+                      <button class='LogOutButton' id="logOut" type="button" name="button" onclick="logOut()">Log
+                          Out</button>
+                      <button class='LogOutButton' id="logIn" type="button" name="button"
+                          onclick="openloginPopup()">Login</button>
+                  </div>
+              </section>
+          </nav>
+          <nav class="abajo">
+              <ul class="opciones">
+                  <li>
+                      <a href="index.html"> #Home</a>
+                  </li>
+                  <li class="descubrirPelicula">
+                  </li>
+                  <li class="descubrirSerie"> 
+                  </li>
+                  <li>
+                      <a href="generos.html">#Géneros</a>
+                  </li>
+                  <li>
+                      <a href="favoritos.html">#Favoritos</a>
+                  </li>
+              </ul>
+          </nav>
+      </header>
+      <h1 id="titulos" class="primero"></h1>
+      <div class="peliculas">
+      
+      </div>
+      <h1 id="titulos" class="segundo"></h1>
+      <div class="series">
+      
+      </div>
+
+      <section class="tapar"></section>
+      <footer>
+            <div class="THDB">
+                <a href=""><img id="logo" src="img/legal.png" alt="logo TMBD"></a>
+
+                <p>
+                    Todas nuestras peliculas fueron elegidas especialmente para vos. Esperamos que las hayas disfrutado!
+                </p>
+                <p>
+                    Todos los derechos reservados
+                </p>
+            </div>
+            <div class="redes">
+                <h2>Seguinos en las redes</h2>
+
+                <p><a href="https://www.instagram.com/agus_arleo/">Agustín Arleo</a></p>
+                <p><a href="https://www.instagram.com//"><a>Maria Laura Rolón</p>
+                <p><a href="https://www.instagram.com//"></a>Federico Bornico </p>
+            </div>
+            <div class="contacto">
+                <h2>Contacto</h2>
+
+                <p>aarleo@udesa.edu.ar</p>
+                <p>mrolon@udesa.edu.ar</p>
+                <p>fbornico@udesa.edu.ar</p>
+            </div>
+      </footer>
   </body>
-  </html>
+</html>
   
