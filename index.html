@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/uikit-rtl.css">
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/buscador.css">
 
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js" defer></script>
     <script src="js/login.js" defer></script>
@@ -82,12 +83,25 @@
                 <section>
                     <img src="img/logo.jpg" class="logo" alt="logo">
                 </section>
-                <section class="search">
-                    <a href="#">
-                        <ion-icon name="search-circle-outline"></ion-icon> Search
-                    </a>
-                </section>
+            </section>
+                <nav class="uk-navbar-container" uk-navbar>
+                    <div class="conenedor_buscador">
+                      <form class="uk-search uk-search-navbar" action="buscador.html" method="get">
+                        <span id="SpanBusqueda" uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Search" name="busqueda">
+                      </form>
+                    </div>
+                  </nav>
+            </section>
                 <section class="avanzado">
+                <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong">
+                    <ion-icon name="search-circle-outline"></ion-icon> Avanzado
+                </a>
+            </section>
+
+                <div>
+                    <p class="Sesion" id="userBadge" style="display:none"></p>
+                </div>
                     <a href="#exampleModalLong" data-toggle="modal" data-target="#exampleModalLong">
                         <!---Aca me va a llevar al otro html--->
                         <ion-icon name="search-circle-outline"></ion-icon> filtro pelicula
@@ -116,7 +130,7 @@
                     </li>
                     <li class="descubrirPelicula">
                     </li>
-                    <li class="descubrirSerie">
+                    <li class="descubrirSerie"> 
                     </li>
                     <li>
                         <a href="generos.html">Géneros</a>
