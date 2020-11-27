@@ -7,7 +7,6 @@ window.addEventListener("load", function () {
 
       let includeList = document.getElementById('includeList');
       let anioPelicula = document.getElementById('anioPelicula');
-
       for (let genre of genres) {
         let option = document.createElement('option');
         option.text = genre.name;
@@ -16,47 +15,23 @@ window.addEventListener("load", function () {
       }
 
       let fecha = new Date();
-
       for (let i = fecha.getFullYear(); i > 1920; i--) {
         let option = document.createElement('option');
         option.text = i;
         option.value = i;
         anioPelicula.add(option);
-
       }
-
-
-
     });
-
 })
 
 
 function buscar(event) {
-  event.preventDefault()
-  fetch(`https://api.themoviedb.org/3/genre/tv/list?api_key=9a2ac68be330a24306c03ee0dac49d3a&language=en-US`)
-    .then(function (respuesta) {
-      return respuesta.json()
-    })
-    .then(function (datos) {
-      let slider = document.getElementById("peliculasPopulares")
+  event.preventDefault();
 
+  let listaGenerosElem = document.getElementById('includeList');
+  let generoNombre = listaGenerosElem.options[listaGenerosElem.selectedIndex].text;
+  let generoID = listaGenerosElem.value;
+  let anioPelicula = document.getElementById('anioPelicula').value;
 
-
-
-
-      let anioPelicula = document.getElementById('anioPelicula');
-
-
-      let idGenero = document.getElementById('includeList').value;
-      console.log("idGenero", idGenero)
-      let listaDePeliculas = []
-      listaDePeliculas = document.getElementById("listaDePeliculas");
-      console.log("listaDePeliculas", listaDePeliculas)
-      let listaFiltrada = datos.results.filter(pelicula => pelicula.genre_ids.includes(idGenero))
-      console.log("listaFiltrada", listaFiltrada)
-
-
-    })
-
+  window.location.href = `xgeneropelicula.html?id=${generoID}&name=${generoNombre}&year=${anioPelicula}`;
 }

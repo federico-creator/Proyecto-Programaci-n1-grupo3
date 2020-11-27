@@ -2,10 +2,11 @@ window.addEventListener("load",function(){
     var querystring = location.search;
     var query2 = new URLSearchParams(querystring)
     var id = query2.get("id")
+    var year = query2.get("year");
     page = 1
     vermas(page)
     function vermas(page){
-        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=0d278db4bda20f994d6bf90837dc480e&language=en-US&sort_by=popularity.desc&page=${page}&with_genres=${id}`)
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=0d278db4bda20f994d6bf90837dc480e&language=en-US&sort_by=popularity.desc&page=${page}&with_genres=${id}&year=${year}`)
         .then(function(respuesta) {
         return respuesta.json();
         })
